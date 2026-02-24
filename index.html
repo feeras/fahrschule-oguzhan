@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fahrschule Oguzhan | Frauenfeld, Thurgau</title>
+  <meta name="description" content="Fahrschule mit Herz in Frauenfeld, Thurgau. Fahrausweise Kat. B, A, Nothelferkurs, VKU und WAB. Persönlich begleitet von Fahrlehrer Oguzhan." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ═══ NAVIGATION ═══ -->
+<nav id="navbar">
+  <div class="nav-container">
+    <a href="#home" class="nav-logo">
+      <span class="logo-icon">🚗</span>
+      <div>
+        <span class="logo-title">Fahrschule Oguzhan</span>
+        <span class="logo-sub">Thurgau · Frauenfeld · seit 1998</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" onclick="closeMenu()">Home</a></li>
+      <li><a href="#oguzhan" onclick="closeMenu()">Ihr Fahrlehrer</a></li>
+      <li><a href="#leistungen" onclick="closeMenu()">Leistungen</a></li>
+      <li><a href="#preise" onclick="closeMenu()">Preise</a></li>
+      <li><a href="#ablauf" onclick="closeMenu()">Ablauf</a></li>
+      <li><a href="#kontakt" onclick="closeMenu()">Kontakt</a></li>
+    </ul>
+    <a href="tel:+41522601010" class="nav-cta">📞 052 260 10 10</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu öffnen" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Overlay fürs Mobile-Menu -->
+<div class="nav-overlay" id="navOverlay" onclick="closeMenu()"></div>
+
+<!-- ═══ HERO ═══ -->
+<section id="home" class="hero">
+  <div class="hero-bg">
+    <img src="images/hero.jpg" alt="Sicheres Fahren auf Schweizer Strassen" class="hero-img" loading="eager" />
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">🇨🇭 &nbsp;Zugelassene Fahrschule – Kanton Thurgau</div>
+    <h1>Sicher ans Ziel —<br /><span class="hero-accent">mit Oguzhan an Ihrer Seite</span></h1>
+    <p class="hero-sub">
+      Persönliche Fahrausbildung in Frauenfeld seit über 25 Jahren.
+      Kompetent, geduldig und mit einer der höchsten Prüfungsquoten im Thurgau.
+    </p>
+    <div class="hero-actions">
+      <a href="#kontakt" class="btn btn-primary">Jetzt anmelden</a>
+      <a href="#preise" class="btn btn-outline">Preise ansehen</a>
+    </div>
+  </div>
+  <div class="hero-scroll" aria-hidden="true">
+    <span>Mehr entdecken</span>
+    <div class="scroll-arrow">↓</div>
+  </div>
+</section>
+
+<!-- ═══ TRUST BAR ═══ -->
+<section class="trust-bar">
+  <div class="container trust-grid">
+    <div class="trust-item">
+      <span class="trust-number" data-target="25" data-suffix="+">25+</span>
+      <span class="trust-label">Jahre Erfahrung</span>
+    </div>
+    <div class="trust-divider"></div>
+    <div class="trust-item">
+      <span class="trust-number" data-target="1800" data-suffix="+">1 800+</span>
+      <span class="trust-label">Fahrschüler ausgebildet</span>
+    </div>
+    <div class="trust-divider"></div>
+    <div class="trust-item">
+      <span class="trust-number" data-target="94" data-suffix=" %">94 %</span>
+      <span class="trust-label">Bestehensquote</span>
+    </div>
+    <div class="trust-divider"></div>
+    <div class="trust-item">
+      <span class="trust-number" data-target="5" data-suffix=" ★">5 ★</span>
+      <span class="trust-label">Kundenbewertung</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ IHR FAHRLEHRER ═══ -->
+<section id="oguzhan" class="section oguzhan-section">
+  <div class="container oguzhan-grid">
+    <div class="oguzhan-img-wrap">
+      <img src="images/oguzhan.jpg" alt="Fahrlehrer Oguzhan" class="oguzhan-img" loading="lazy" />
+      <div class="oguzhan-badge">
+        <span class="ob-icon">🏅</span>
+        <div>
+          <strong>Zertifizierter Fahrlehrer</strong>
+          <span>Kanton Thurgau · VFK-Mitglied</span>
+        </div>
+      </div>
+    </div>
+    <div class="oguzhan-content">
+      <span class="section-label">Ihr Fahrlehrer</span>
+      <h2>Oguzhan — <br />Mehr als nur ein Fahrlehrer</h2>
+      <p class="oguzhan-lead">
+        Ich glaube daran, dass Fahren mehr ist als nur Gas geben und lenken. Es geht um <strong>Verantwortung, Sicherheit und Selbstvertrauen</strong> — und genau das vermittle ich Ihnen.
+      </p>
+      <p>
+        Seit über 25 Jahren begleite ich Menschen durch die Fahrausbildung: Teenager, die zum ersten Mal hinter dem Steuer sitzen, Erwachsene, die nach einer langen Pause wieder einsteigen, und alle, die einfach sicherer werden wollen. Jeder Mensch lernt anders — das respektiere ich.
+      </p>
+      <p>
+        Mein Unterrichtsstil? <strong>Ruhig, klar, ohne Druck.</strong> Ich erkläre nicht nur, ich zeige. Fehler sehe ich als Lernchancen — nicht als Misserfolge. Meine Schülerinnen und Schüler kommen nicht nur für den Führerschein zu mir. Viele bleiben für das Gefühl, das echte Sicherheit gibt.
+      </p>
+      <div class="oguzhan-facts">
+        <div class="ofact">
+          <span class="ofact-icon">🎓</span>
+          <div>
+            <strong>Ausbildung</strong>
+            <span>Eidg. Fachausweis Fahrlehrer, VKU-Instruktor, Nothelferkurs-Leiter</span>
+          </div>
+        </div>
+        <div class="ofact">
+          <span class="ofact-icon">🗣️</span>
+          <div>
+            <strong>Sprachen</strong>
+            <span>Deutsch, Türkisch, Englisch</span>
+          </div>
+        </div>
+        <div class="ofact">
+          <span class="ofact-icon">📍</span>
+          <div>
+            <strong>Einsatzgebiet</strong>
+            <span>Frauenfeld, Weinfelden, Kreuzlingen, Arbon und Umgebung</span>
+          </div>
+        </div>
+      </div>
+      <a href="#kontakt" class="btn btn-primary mt-1">Jetzt Termin vereinbaren</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LEISTUNGEN ═══ -->
+<section id="leistungen" class="section leistungen bg-light">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Was wir anbieten</span>
+      <h2>Unsere Leistungen</h2>
+      <p>Von Kategorie A bis VKU — alles aus einer Hand, alles mit Oguzhan.</p>
+    </div>
+    <div class="leistungen-grid">
+
+      <div class="leistung-card">
+        <div class="leistung-img-wrap">
+          <img src="images/car-interior.jpg" alt="Fahrausbildung Kat. B – Alltags-PKW" loading="lazy" />
+          <div class="leistung-badge">Beliebteste Wahl</div>
+        </div>
+        <div class="leistung-body">
+          <div class="leistung-icon">🚗</div>
+          <h3>Personenwagen – Kat. B</h3>
+          <p>Die klassische Fahrausbildung. Theorie, Praxis, VKU und Prüfungsvorbereitung — wir begleiten Sie lückenlos bis zum Fahrausweis.</p>
+          <ul>
+            <li>Manuell &amp; Automat möglich</li>
+            <li>Lernfahrausweis-Begleitung eingeschlossen</li>
+            <li>Prüfungsfahrt inbegriffen</li>
+          </ul>
+          <a href="#preise" class="leistung-link">Preise ansehen →</a>
+        </div>
+      </div>
+
+      <div class="leistung-card">
+        <div class="leistung-img-wrap">
+          <img src="images/motorcycle.jpg" alt="Motorrad Fahrausbildung Kat. A" loading="lazy" />
+        </div>
+        <div class="leistung-body">
+          <div class="leistung-icon">🏍️</div>
+          <h3>Motorrad – Kat. A / A1</h3>
+          <p>Freiheit auf zwei Rädern. Unsere erfahrenen Instruktoren begleiten Sie sicher durch die Ausbildung für Kat. A und A1.</p>
+          <ul>
+            <li>MOTO-Basis- und Ergänzungskurse</li>
+            <li>Geländeübungen &amp; Sicherheitstraining</li>
+            <li>Schulungsmotorrad verfügbar</li>
+          </ul>
+          <a href="#preise" class="leistung-link">Preise ansehen →</a>
+        </div>
+      </div>
+
+      <div class="leistung-card">
+        <div class="leistung-img-wrap">
+          <img src="images/first-aid.jpg" alt="Nothelferkurs – Erste Hilfe" loading="lazy" />
+        </div>
+        <div class="leistung-body">
+          <div class="leistung-icon">🩺</div>
+          <h3>Nothelferkurs</h3>
+          <p>Pflicht für den Führerausweis — bei uns professionell, praxisnah und in kleinen Gruppen. Kursdauer: 1 Tag (7 Stunden).</p>
+          <ul>
+            <li>Reanimation &amp; Erste Hilfe</li>
+            <li>Max. 12 Personen pro Kurs</li>
+            <li>Zertifikat sofort nach dem Kurs</li>
+          </ul>
+          <a href="#preise" class="leistung-link">Preise ansehen →</a>
+        </div>
+      </div>
+
+      <div class="leistung-card">
+        <div class="leistung-img-wrap">
+          <img src="images/steering2.jpg" alt="Verkehrskunde VKU" loading="lazy" />
+        </div>
+        <div class="leistung-body">
+          <div class="leistung-icon">📚</div>
+          <h3>Verkehrskunde (VKU)</h3>
+          <p>Der Verkehrskundeunterricht ist Pflicht für alle Fahranfänger. Interaktiv, modern und verständlich aufbereitet von Oguzhan.</p>
+          <ul>
+            <li>2 Tage à je 4 Stunden</li>
+            <li>Gruppen- &amp; Einzelunterricht möglich</li>
+            <li>Anerkennung für Probezeit-Verlängerung</li>
+          </ul>
+          <a href="#preise" class="leistung-link">Preise ansehen →</a>
+        </div>
+      </div>
+
+      <div class="leistung-card">
+        <div class="leistung-img-wrap">
+          <img src="images/study.jpg" alt="Theorieunterricht – Bücher und Lernen" loading="lazy" />
+        </div>
+        <div class="leistung-body">
+          <div class="leistung-icon">📝</div>
+          <h3>Theorieunterricht</h3>
+          <p>Gut vorbereitet in die Theorieprüfung — mit strukturiertem Unterricht und der modernen Lern-App meistern Sie die Theorie ohne Stress.</p>
+          <ul>
+            <li>6 Lektionen im Paket</li>
+            <li>Online-Lernplattform inklusive</li>
+            <li>Prüfungssimulation inklusive</li>
+          </ul>
+          <a href="#preise" class="leistung-link">Preise ansehen →</a>
+        </div>
+      </div>
+
+      <div class="leistung-card">
+        <div class="leistung-img-wrap">
+          <img src="images/country-road.jpg" alt="WAB Weiterausbildung – Fahren auf kurviger Strasse" loading="lazy" />
+        </div>
+        <div class="leistung-body">
+          <div class="leistung-icon">🎓</div>
+          <h3>WAB – Weiterausbildung</h3>
+          <p>Nach der Probezeit ist die WAB Pflicht (2 Kurse). Praxisnah, interessant und in entspannter Atmosphäre mit Oguzhan.</p>
+          <ul>
+            <li>WAB 1: Fahren auf nasser Fahrbahn</li>
+            <li>WAB 2: Ökonomisch &amp; vorausschauend fahren</li>
+            <li>Termine flexibel buchbar</li>
+          </ul>
+          <a href="#preise" class="leistung-link">Preise ansehen →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PREISE ═══ -->
+<section id="preise" class="section preise">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Transparente Kosten</span>
+      <h2>Unsere Preise</h2>
+      <p>Keine versteckten Kosten. Alle Preise in CHF, inkl. MwSt.</p>
+    </div>
+
+    <div class="preise-grid">
+
+      <div class="preis-card preis-featured">
+        <div class="preis-header">
+          <span class="preis-icon">🚗</span>
+          <h3>Kategorie B – Auto</h3>
+          <p class="preis-sub">Personenwagen (manuell &amp; Automat)</p>
+        </div>
+        <div class="preis-body">
+          <div class="preis-row">
+            <span class="preis-name">Fahrstunde 45 Min.</span>
+            <span class="preis-value">CHF 98.–</span>
+          </div>
+          <div class="preis-row">
+            <span class="preis-name">Fahrstunde 60 Min.</span>
+            <span class="preis-value">CHF 130.–</span>
+          </div>
+          <div class="preis-row">
+            <span class="preis-name">Prüfungsfahrt (inkl. Amtsgebühr)</span>
+            <span class="preis-value">CHF 200.–</span>
+          </div>
+          <div class="preis-row preis-highlight">
+            <span class="preis-name">✨ Paket 10 × 45 Min.</span>
+            <span class="preis-value">CHF 920.–</span>
+          </div>
+          <div class="preis-note">Amtsgebühr Fahrprüfung (Kt. TG): ca. CHF 143.– (separat)</div>
+        </div>
+      </div>
+
+      <div class="preis-card">
+        <div class="preis-header">
+          <span class="preis-icon">🏍️</span>
+          <h3>Kategorie A / A1 – Motorrad</h3>
+          <p class="preis-sub">Motorrad &amp; Kleinmotorrad</p>
+        </div>
+        <div class="preis-body">
+          <div class="preis-row">
+            <span class="preis-name">Fahrstunde 45 Min.</span>
+            <span class="preis-value">CHF 108.–</span>
+          </div>
+          <div class="preis-row">
+            <span class="preis-name">MOTO-Basiskurs (2 Tage)</span>
+            <span class="preis-value">CHF 420.–</span>
+          </div>
+          <div class="preis-row">
+            <span class="preis-name">MOTO-Ergänzungskurs</span>
+            <span class="preis-value">CHF 380.–</span>
+          </div>
+          <div class="preis-row preis-highlight">
+            <span class="preis-name">✨ Paket 8 × 45 Min.</span>
+            <span class="preis-value">CHF 830.–</span>
+          </div>
+          <div class="preis-note">Schulungsmotorrad verfügbar (+CHF 30.–/Std.)</div>
+        </div>
+      </div>
+
+      <div class="preis-card">
+        <div class="preis-header">
+          <span class="preis-icon">📚</span>
+          <h3>Kurse &amp; Unterricht</h3>
+          <p class="preis-sub">Pflicht- und Zusatzkurse</p>
+        </div>
+        <div class="preis-body">
+          <div class="preis-row">
+            <span class="preis-name">Nothelferkurs (1 Tag, 7h)</span>
+            <span class="preis-value">CHF 175.–</span>
+          </div>
+          <div class="preis-row">
+            <span class="preis-name">VKU – Verkehrskunde (2 × 4h)</span>
+            <span class="preis-value">CHF 295.–</span>
+          </div>
+          <div class="preis-row">
+            <span class="preis-name">Theorieunterricht (6 Lektionen)</span>
+            <span class="preis-value">CHF 240.–</span>
+          </div>
+          <div class="preis-row">
+            <span class="preis-name">WAB 1 oder WAB 2</span>
+            <span class="preis-value">CHF 280.–</span>
+          </div>
+          <div class="preis-row preis-highlight">
+            <span class="preis-name">✨ WAB Kombi (1 + 2)</span>
+            <span class="preis-value">CHF 520.–</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="kosten-info">
+      <div class="kosten-icon">💡</div>
+      <div class="kosten-content">
+        <h4>Was kostet ein Fahrausweis Kat. B insgesamt?</h4>
+        <p>
+          Die Gesamtkosten hängen von Ihrer Lerngeschwindigkeit ab. Als Richtwert rechnen Schweizer Fahranfänger
+          mit <strong>CHF 2 500 – 4 000 inkl. aller Kurse, Fahrstunden und Prüfungsgebühren</strong>.
+          Oguzhan berät Sie gern persönlich und erstellt ein massgeschneidertes Angebot.
+        </p>
+        <a href="#kontakt" class="btn btn-primary mt-05">Jetzt Beratungsgespräch anfragen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ABLAUF ═══ -->
+<section id="ablauf" class="section ablauf bg-light">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Der Weg zum Führerschein</span>
+      <h2>So läuft Ihre Ausbildung ab</h2>
+      <p>Schritt für Schritt — transparent, ohne Überraschungen.</p>
+    </div>
+    <div class="ablauf-steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-content">
+          <h3>Beratungsgespräch</h3>
+          <p>Kostenlos und unverbindlich. Oguzhan klärt mit Ihnen Ausgangslage, Ziele und wählt das passende Ausbildungspaket.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-content">
+          <h3>Nothelferkurs &amp; Lernfahrausweis</h3>
+          <p>Zuerst der Nothelferkurs (1 Tag), dann der Lernfahrausweis beim Strassenverkehrsamt. Wir helfen bei allen Unterlagen.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-content">
+          <h3>Theorieprüfung</h3>
+          <p>Mit Theorieunterricht und Lern-App optimal vorbereitet. Die Prüfung wird direkt beim Strassenverkehrsamt abgelegt.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <div class="step-content">
+          <h3>Praktische Fahrstunden</h3>
+          <p>Start in ruhigen Gebieten, schrittweise Steigerung — Autobahn, Nacht, Regen. Ihr Tempo bestimmt den Fortschritt.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">05</div>
+        <div class="step-content">
+          <h3>VKU – Verkehrskundeunterricht</h3>
+          <p>Der zweitägige Pflicht-Kurs zu Risiken, Wahrnehmung und ökonomischem Fahren — bei Oguzhan immer praxisnah.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">06</div>
+        <div class="step-content">
+          <h3>Praktische Prüfung 🎉</h3>
+          <p>Wenn Oguzhan sagt, Sie sind bereit — dann sind Sie es. Mit unserer Bestehensquote von 94 % steht einem Erfolg nichts im Weg.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TESTIMONIALS ═══ -->
+<section class="section testimonials">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Was unsere Schüler sagen</span>
+      <h2>Stimmen aus dem Thurgau</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p>„Oguzhan ist unglaublich geduldig und verständnisvoll. Ich hatte von Anfang an Vertrauen in ihn — beim ersten Anlauf bestanden. Mega!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar">L</div>
+          <div><strong>Laura M.</strong><span>Frauenfeld, 2024</span></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p>„Die Terminplanung war super flexibel — abends nach der Arbeit oder am Wochenende. Oguzhan hat immer eine Lösung gefunden. Klasse!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar">T</div>
+          <div><strong>Tobias R.</strong><span>Kreuzlingen, 2024</span></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p>„Der Nothelferkurs war viel interessanter als erwartet. Und der VKU bei Oguzhan war einfach top — lehrreich und nie langweilig!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar">S</div>
+          <div><strong>Sara K.</strong><span>Arbon, 2023</span></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p>„Nach 10 Jahren Pause wieder ans Steuer — Oguzhan hat mich schrittweise aufgebaut. Ich fühle mich heute sicherer als damals!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar">M</div>
+          <div><strong>Markus B.</strong><span>Weinfelden, 2024</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section class="section faq bg-light">
+  <div class="container faq-layout">
+    <div class="faq-header">
+      <span class="section-label">FAQ</span>
+      <h2>Häufige Fragen</h2>
+      <p>Noch etwas unklar? Oguzhan antwortet ehrlich.</p>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Ab welchem Alter kann ich beginnen?</summary>
+        <p>Den Lernfahrausweis für Kat. B kann man ab 17 Jahren beantragen. Fahrstunden sind ab diesem Alter möglich. Die praktische Prüfung darf frühestens mit 18 Jahren abgelegt werden.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Wie viele Fahrstunden brauche ich durchschnittlich?</summary>
+        <p>Das variiert stark. Im Durchschnitt benötigen unsere Schülerinnen und Schüler zwischen 15 und 30 Fahrstunden. Manche kommen mit 10 aus — das ist individuell und ganz normal.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Bietet Oguzhan Unterricht auf Türkisch an?</summary>
+        <p>Ja! Oguzhan spricht fliessend Türkisch, Deutsch und Englisch. Viele türkischsprachige Fahrschüler schätzen es besonders, in ihrer Muttersprache unterrichtet zu werden — vor allem für Theorie und komplexe Verkehrsregeln.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Kann ich auf einem Automatikfahrzeug ausgebildet werden?</summary>
+        <p>Ja, wir bieten Fahrstunden auf Automatikfahrzeugen an. Bitte beachten: Der Fahrausweis auf Automat berechtigt nur zum Führen von Automatikfahrzeugen. Ein Upgrade auf manuell ist jederzeit möglich.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Was passiert, wenn ich die Prüfung nicht bestehe?</summary>
+        <p>Das kommt vor — auch bei gut vorbereiteten Kandidaten. Nach einer Wartefrist von mind. 4 Wochen analysieren wir gemeinsam, was verbessert werden muss, und bereiten Sie gezielt vor.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Wie kann ich einen Termin buchen?</summary>
+        <p>Einfach per Telefon, E-Mail oder Kontaktformular. Oguzhan meldet sich innert 24 Stunden. Dringende Anfragen: direkt unter 052 260 10 10.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ KONTAKT ═══ -->
+<section id="kontakt" class="section kontakt">
+  <div class="container kontakt-grid">
+    <div class="kontakt-info">
+      <span class="section-label">Kontakt</span>
+      <h2>Bereit loszulegen?</h2>
+      <p>Melden Sie sich — kein Stress, keine Verpflichtung. Oguzhan freut sich auf Ihre Nachricht.</p>
+      <div class="kontakt-details">
+        <div class="kontakt-item">
+          <span class="kontakt-icon">📍</span>
+          <div>
+            <strong>Adresse</strong>
+            <span>Bahnhofstrasse 45<br />8500 Frauenfeld, Thurgau</span>
+          </div>
+        </div>
+        <div class="kontakt-item">
+          <span class="kontakt-icon">📞</span>
+          <div>
+            <strong>Telefon</strong>
+            <a href="tel:+41522601010">052 260 10 10</a>
+          </div>
+        </div>
+        <div class="kontakt-item">
+          <span class="kontakt-icon">✉️</span>
+          <div>
+            <strong>E-Mail</strong>
+            <a href="mailto:oguzhan@fahrschule-oguzhan.ch">oguzhan@fahrschule-oguzhan.ch</a>
+          </div>
+        </div>
+        <div class="kontakt-item">
+          <span class="kontakt-icon">🕐</span>
+          <div>
+            <strong>Öffnungszeiten</strong>
+            <span>Mo–Fr: 08:00–19:00<br />Sa: 08:00–16:00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="kontakt-form-wrap">
+      <form class="kontakt-form" id="contactForm">
+        <h3>Nachricht an Oguzhan</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">Vorname *</label>
+            <input type="text" id="fname" name="fname" placeholder="Max" required />
+          </div>
+          <div class="form-group">
+            <label for="lname">Nachname *</label>
+            <input type="text" id="lname" name="lname" placeholder="Muster" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">E-Mail *</label>
+          <input type="email" id="email" name="email" placeholder="max@example.ch" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">Telefon</label>
+          <input type="tel" id="phone" name="phone" placeholder="+41 79 000 00 00" />
+        </div>
+        <div class="form-group">
+          <label for="interesse">Ich interessiere mich für …</label>
+          <select id="interesse" name="interesse">
+            <option value="">Bitte wählen</option>
+            <option>Fahrausweis Kat. B (Auto)</option>
+            <option>Fahrausweis Kat. A (Motorrad)</option>
+            <option>Nothelferkurs</option>
+            <option>VKU</option>
+            <option>WAB</option>
+            <option>Theorieunterricht</option>
+            <option>Anderes / Beratung</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Ihre Nachricht</label>
+          <textarea id="message" name="message" rows="4" placeholder="Haben Sie spezifische Wünsche oder Fragen?"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Nachricht senden →</button>
+        <p class="form-note">Oguzhan antwortet innert 24 Stunden. Ihre Daten werden vertraulich behandelt.</p>
+      </form>
+      <div class="form-success" id="formSuccess" style="display:none;">
+        <div class="success-icon">✅</div>
+        <h3>Vielen Dank!</h3>
+        <p>Ihre Nachricht ist angekommen. Oguzhan meldet sich bald bei Ihnen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo"><span>🚗</span><span>Fahrschule Oguzhan</span></div>
+      <p>Persönliche Fahrausbildung mit Oguzhan in Frauenfeld, Kanton Thurgau. Zuverlässig seit 1998.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#oguzhan">Ihr Fahrlehrer</a></li>
+        <li><a href="#leistungen">Leistungen</a></li>
+        <li><a href="#preise">Preise</a></li>
+        <li><a href="#ablauf">Ablauf</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Leistungen</h4>
+      <ul>
+        <li><a href="#leistungen">Kat. B – Auto</a></li>
+        <li><a href="#leistungen">Kat. A – Motorrad</a></li>
+        <li><a href="#leistungen">Nothelferkurs</a></li>
+        <li><a href="#leistungen">VKU</a></li>
+        <li><a href="#leistungen">WAB</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Kontakt</h4>
+      <p>Bahnhofstrasse 45<br />8500 Frauenfeld</p>
+      <p><a href="tel:+41522601010">052 260 10 10</a></p>
+      <p><a href="mailto:oguzhan@fahrschule-oguzhan.ch">oguzhan@fahrschule-oguzhan.ch</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© 2025 Fahrschule Oguzhan · Oguzhan · Frauenfeld · <a href="#">Impressum</a> · <a href="#">Datenschutz</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
