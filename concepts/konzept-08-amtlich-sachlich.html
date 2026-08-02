@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Konzept 08 – Amtlich & Sachlich | Fahrschule Oguzhan</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, Helvetica, system-ui, sans-serif; color: #1a1a1a; background: #fff; line-height: 1.55; font-size: 15px; }
+  .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+  a { color: #14508C; }
+  a:hover { text-decoration: none; }
+
+  .top-bar { background: #14508C; color: #fff; font-size: .78rem; padding: 6px 0; }
+  .top-bar .container { display: flex; justify-content: space-between; }
+
+  header { border-bottom: 3px solid #14508C; padding: 18px 0; }
+  header .container { display: flex; justify-content: space-between; align-items: center; }
+  .org-title { font-size: 1.15rem; font-weight: bold; }
+  .org-sub { font-size: .8rem; color: #444; }
+  nav ul { list-style: none; display: flex; gap: 4px; padding: 10px 0 0; }
+  nav a { display: block; padding: 8px 14px; font-size: .85rem; color: #1a1a1a; border: 1px solid #ccc; border-bottom: none; background: #F0F2F4; }
+
+  .section { padding: 26px 0; border-bottom: 1px solid #ccc; }
+  .section h2 { font-size: 1.15rem; border-left: 4px solid #14508C; padding-left: 10px; margin-bottom: 14px; }
+  .section h3 { font-size: 1rem; margin: 16px 0 6px; }
+  .section p { margin-bottom: 10px; text-align: justify; }
+  .section ul, .section ol { margin: 8px 0 14px 22px; }
+  .section li { margin-bottom: 4px; }
+
+  .notice-box { background: #F0F2F4; border: 1px solid #C6CCD3; padding: 14px 16px; margin: 16px 0; font-size: .9rem; }
+  .notice-box strong { display: block; margin-bottom: 4px; }
+
+  table { width: 100%; border-collapse: collapse; margin: 12px 0 18px; font-size: .9rem; }
+  table caption { text-align: left; font-weight: bold; margin-bottom: 6px; }
+  th, td { border: 1px solid #C6CCD3; padding: 8px 10px; text-align: left; }
+  th { background: #E8ECEF; }
+  tr:nth-child(even) td { background: #F7F8F9; }
+  td.num { text-align: right; }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+
+  .contact-block { background: #F0F2F4; padding: 20px; border: 1px solid #C6CCD3; }
+  .contact-block dl { display: grid; grid-template-columns: 120px 1fr; gap: 8px 12px; font-size: .9rem; }
+  .contact-block dt { font-weight: bold; }
+
+  footer { background: #14508C; color: #cfe0f2; font-size: .8rem; padding: 18px 0; }
+  footer .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+  footer a { color: #fff; }
+
+  @media (max-width: 820px) {
+    header .container { flex-direction: column; align-items: flex-start; gap: 12px; }
+    nav ul { flex-wrap: wrap; }
+  }
+  @media (max-width: 700px) {
+    .two-col { grid-template-columns: 1fr; }
+    .top-bar .container { flex-direction: column; gap: 2px; }
+    .contact-block dl { grid-template-columns: 1fr; gap: 2px 0; }
+    .contact-block dt { margin-top: 8px; }
+  }
+  @media (max-width: 480px) {
+    table { font-size: .8rem; }
+    th, td { padding: 6px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="container">
+    <span>Kanton Thurgau · Region Frauenfeld</span>
+    <span>Telefon 052 260 10 10</span>
+  </div>
+</div>
+
+<header>
+  <div class="container">
+    <div class="org-title">Fahrschule Oguzhan</div>
+    <div class="org-sub">Anerkannter Ausbildungsbetrieb für Fahrausweiskategorien A und B</div>
+    <nav>
+      <ul>
+        <li><a href="#ausbildung">Ausbildung</a></li>
+        <li><a href="#preise">Gebührenübersicht</a></li>
+        <li><a href="#ablauf">Verfahrensablauf</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="section" id="ueber">
+  <div class="container">
+    <h2>1. Allgemeine Informationen</h2>
+    <p>Die Fahrschule Oguzhan mit Sitz in Frauenfeld bietet seit über 25 Jahren die praktische und theoretische Ausbildung für den Erwerb des Führerausweises der Kategorien B (Personenwagen) und A/A1 (Motorrad) an. Der Betrieb wird geführt durch Herrn Oguzhan, eidgenössisch diplomierter Fahrlehrer.</p>
+    <div class="notice-box">
+      <strong>Hinweis</strong>
+      Voraussetzung für die Ausbildung ist der gültige Lernfahrausweis des Strassenverkehrsamtes Thurgau sowie der Nachweis eines besuchten Nothelferkurses.
+    </div>
+  </div>
+</section>
+
+<section class="section" id="ausbildung">
+  <div class="container">
+    <h2>2. Ausbildungsangebot</h2>
+    <div class="two-col">
+      <div>
+        <h3>2.1 Fahrausweis Kategorie B</h3>
+        <p>Praktische Fahrausbildung in manueller oder automatischer Schaltung. Die Anzahl der erforderlichen Lektionen richtet sich nach dem individuellen Lernfortschritt der ausbildenden Person.</p>
+        <h3>2.2 Fahrausweis Kategorie A / A1</h3>
+        <p>Ausbildung auf betriebseigenem Schulungsmotorrad, inklusive obligatorischem Sicherheitstraining gemäss Vorgaben des Bundesamtes für Strassen (ASTRA).</p>
+      </div>
+      <div>
+        <h3>2.3 Nothelferkurs</h3>
+        <p>Eintägiger Kurs gemäss gesetzlicher Vorgabe, maximal 12 Teilnehmende pro Durchführung, Zertifikat wird am Kurstag ausgestellt.</p>
+        <h3>2.4 Verkehrskunde (VKU)</h3>
+        <p>Zweitägiger Kurs à je vier Stunden. Bescheinigung wird nach Abschluss ausgehändigt und ist Voraussetzung für die praktische Führerprüfung.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="preise">
+  <div class="container">
+    <h2>3. Gebührenübersicht</h2>
+    <table>
+      <caption>Tabelle 1 — Fahrstunden</caption>
+      <thead><tr><th>Leistung</th><th>Dauer</th><th>Gebühr</th></tr></thead>
+      <tbody>
+        <tr><td>Fahrstunde Kat. B</td><td>45 Min.</td><td class="num">CHF 98.00</td></tr>
+        <tr><td>Fahrstunde Kat. B</td><td>60 Min.</td><td class="num">CHF 130.00</td></tr>
+        <tr><td>Lektionenpaket (10 Einheiten)</td><td>10 × 45 Min.</td><td class="num">CHF 920.00</td></tr>
+        <tr><td>Fahrstunde Kat. A</td><td>45 Min.</td><td class="num">CHF 108.00</td></tr>
+      </tbody>
+    </table>
+    <table>
+      <caption>Tabelle 2 — Obligatorische Kurse</caption>
+      <thead><tr><th>Kurs</th><th>Umfang</th><th>Gebühr</th></tr></thead>
+      <tbody>
+        <tr><td>Nothelferkurs</td><td>1 Tag</td><td class="num">CHF 175.00</td></tr>
+        <tr><td>Verkehrskunde (VKU)</td><td>2 Tage</td><td class="num">CHF 295.00</td></tr>
+        <tr><td>Theorieunterricht</td><td>6 Lektionen</td><td class="num">CHF 240.00</td></tr>
+        <tr><td>Weiterausbildungskurs (WAB) 1 oder 2</td><td>1 Tag</td><td class="num">CHF 280.00</td></tr>
+        <tr><td>Weiterausbildungskurs (WAB) Kombination</td><td>2 Tage</td><td class="num">CHF 520.00</td></tr>
+        <tr><td>Prüfungsfahrt (inkl. amtliche Gebühr)</td><td>—</td><td class="num">CHF 200.00</td></tr>
+      </tbody>
+    </table>
+    <p><em>Alle Angaben in Schweizer Franken (CHF), inkl. gesetzlicher Mehrwertsteuer, sofern anwendbar.</em></p>
+  </div>
+</section>
+
+<section class="section" id="ablauf">
+  <div class="container">
+    <h2>4. Verfahrensablauf zum Erwerb des Führerausweises</h2>
+    <ol>
+      <li>Anmeldung bei der Fahrschule (telefonisch, per E-Mail oder WhatsApp)</li>
+      <li>Besuch des Nothelferkurses</li>
+      <li>Beantragung des Lernfahrausweises beim Strassenverkehrsamt Thurgau</li>
+      <li>Ablegen der Theorieprüfung</li>
+      <li>Absolvierung der praktischen Fahrstunden</li>
+      <li>Besuch der Verkehrskunde (VKU)</li>
+      <li>Anmeldung zur praktischen Führerprüfung durch die Fahrschule</li>
+    </ol>
+    <div class="notice-box">
+      <strong>Zur Kenntnisnahme</strong>
+      Die Fahrschule Oguzhan übernimmt auf Wunsch die administrative Anmeldung zu Prüfungen beim Strassenverkehrsamt Thurgau.
+    </div>
+  </div>
+</section>
+
+<section class="section" id="kontakt">
+  <div class="container">
+    <h2>5. Kontaktangaben</h2>
+    <div class="contact-block">
+      <dl>
+        <dt>Firma</dt><dd>Fahrschule Oguzhan</dd>
+        <dt>Adresse</dt><dd>Bahnhofstrasse 45, 8500 Frauenfeld</dd>
+        <dt>Telefon</dt><dd>052 260 10 10</dd>
+        <dt>E-Mail</dt><dd>oguzhan@fahrschule-oguzhan.ch</dd>
+        <dt>Sprechzeiten</dt><dd>Montag–Freitag 08:00–19:00 Uhr, Samstag 08:00–16:00 Uhr</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <span>© 2025 Fahrschule Oguzhan</span>
+    <span><a href="#">Impressum</a> · <a href="#">Datenschutzerklärung</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

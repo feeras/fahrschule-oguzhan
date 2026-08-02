@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Konzept 11 – Bojan-Style (Video-Hero) | Fahrschule Oguzhan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet" />
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  :root {
+    --blue: #0090FD; --blue-dark: #0077D6;
+    --dark-btn: #525252; --dark-btn-2: #3d3d3d;
+    --ink: #0a0a0a; --white: #fff; --muted: #6b6f76;
+    --grad-body: linear-gradient(180deg, #757575 0%, #373b42 100%);
+    --grad-band: linear-gradient(180deg, #2a2a2a 0%, #0a0a0a 100%);
+    --wa-green: #4AB64D;
+    --radius: 3px;
+  }
+  body { font-family: 'Roboto', system-ui, sans-serif; color: #222; background: var(--grad-body); line-height: 1.65; }
+  .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+  a { text-decoration: none; color: inherit; }
+  h1, h2, h3 { font-weight: 900; color: #1a1a1a; }
+
+  .placeholder-note { background: #FFF4E5; color: #8A5A00; text-align: center; font-size: .78rem; padding: 8px 16px; border-bottom: 1px solid #F3D9A6; }
+
+  /* ═══ NAV ═══ */
+  header { background: #070707; position: relative; z-index: 30; }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 24px; max-width: 1160px; margin: 0 auto; }
+  .brand { display: flex; flex-direction: column; line-height: 1.1; }
+  .brand .script { font-family: 'Dancing Script', cursive; font-size: 1.6rem; color: #fff; font-weight: 700; }
+  .brand .sub { font-size: .68rem; letter-spacing: .18em; color: rgba(255,255,255,.75); font-weight: 700; }
+  .nav-links { display: flex; gap: 30px; }
+  .nav-links a { color: rgba(255,255,255,.88); font-weight: 500; font-size: .9rem; }
+  .nav-links a:hover { color: var(--blue); }
+
+  /* ═══ VIDEO HERO ═══ */
+  .hero { position: relative; height: 82vh; min-height: 520px; display: flex; align-items: center; overflow: hidden; background: #111; }
+  .hero-video-wrap { position: absolute; inset: 0; z-index: 0; }
+  .hero-video-wrap video { width: 100%; height: 100%; object-fit: cover; }
+  .hero-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,.6) 0%, rgba(0,0,0,.15) 55%, rgba(0,0,0,.5) 100%), linear-gradient(0deg, rgba(0,0,0,.55) 0%, transparent 40%); }
+  .hero-content { position: relative; z-index: 1; padding: 0 24px; max-width: 1160px; margin: 0 auto; width: 100%; }
+  .hero h1 { color: #fff; font-size: clamp(1.9rem, 5vw, 3.2rem); font-weight: 900; line-height: 1.15; max-width: 640px; }
+  .hero h1 .x { color: var(--blue); }
+  .hero-actions { margin-top: 30px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn { display: inline-block; padding: 13px 26px; border-radius: var(--radius); font-weight: 700; font-size: .88rem; }
+  .btn-blue { background: var(--blue); color: #fff; }
+  .btn-blue:hover { background: var(--blue-dark); }
+  .btn-dark { background: var(--dark-btn); color: #fff; }
+  .btn-dark:hover { background: var(--dark-btn-2); }
+
+  /* ═══ INFO CARD ROWS (alternating white card + photo) ═══ */
+  .section { padding: 56px 0; }
+  .info-row { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: stretch; margin-bottom: 24px; }
+  .info-row.reverse { direction: rtl; }
+  .info-row.reverse > * { direction: ltr; }
+  .info-card { background: #fff; border-radius: 6px; padding: 40px; display: flex; flex-direction: column; justify-content: center; box-shadow: 0 10px 30px rgba(0,0,0,.2); }
+  .info-card .eyebrow { font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); font-weight: 700; margin-bottom: 10px; }
+  .info-card h2 { font-size: 1.5rem; margin-bottom: 14px; }
+  .info-card p { color: #444; font-size: .92rem; margin-bottom: 10px; }
+  .info-card p.strong { color: #222; font-weight: 500; }
+  .info-card .btn { align-self: flex-start; margin-top: 14px; }
+  .info-photo { border-radius: 6px; overflow: hidden; min-height: 280px; box-shadow: 0 10px 30px rgba(0,0,0,.2); }
+  .info-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+  /* ═══ CTA BAND ═══ */
+  .cta-band { background: var(--grad-band); border-radius: 6px; text-align: center; padding: 46px 24px; margin: 40px 0; box-shadow: 0 10px 30px rgba(0,0,0,.25); }
+  .cta-band h2 { color: #fff; font-size: 1.4rem; margin-bottom: 6px; }
+  .cta-band p { color: rgba(255,255,255,.65); font-size: .88rem; margin-bottom: 20px; }
+
+  /* ═══ TRUST STRIP ═══ */
+  .trust { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 16px; padding: 30px 24px; }
+  .trust-item { text-align: center; }
+  .trust-item strong { display: block; font-size: 1.6rem; font-weight: 900; color: #fff; }
+  .trust-item span { font-size: .74rem; color: rgba(255,255,255,.7); text-transform: uppercase; letter-spacing: .05em; }
+
+  /* ═══ REVIEWS ═══ */
+  .reviews-head { text-align: center; margin-bottom: 28px; }
+  .reviews-head h2 { color: #fff; font-size: 1.5rem; }
+  .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .review { background: #1c1c1c; border-radius: 6px; padding: 22px; }
+  .review-top { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+  .av { width: 38px; height: 38px; border-radius: 50%; background: var(--blue); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; }
+  .review-top strong { color: #fff; font-size: .88rem; display: block; }
+  .review-top span { color: rgba(255,255,255,.45); font-size: .72rem; }
+  .review .stars { color: #F5B301; font-size: .82rem; margin-bottom: 8px; }
+  .review p { color: rgba(255,255,255,.75); font-size: .84rem; }
+
+  /* ═══ FOOTER ═══ */
+  footer.site-footer { background: #070707; padding: 48px 24px; margin-top: 40px; }
+  .footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 1160px; margin: 0 auto; }
+  .footer-grid h3 { color: #fff; font-size: 1.1rem; margin-bottom: 18px; }
+  .footer-contact-item { display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,.8); font-size: .9rem; margin-bottom: 12px; }
+  .footer-contact-item .ic { width: 30px; height: 30px; border-radius: 50%; background: #1c1c1c; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .map-embed { border-radius: 6px; overflow: hidden; height: 220px; border: none; width: 100%; }
+  .footer-bottom { text-align: center; margin-top: 32px; color: rgba(255,255,255,.35); font-size: .78rem; }
+
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+    .info-row, .info-row.reverse { grid-template-columns: 1fr; direction: ltr; }
+    .info-photo { min-height: 220px; }
+    .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 620px) {
+    .reviews-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="placeholder-note">Beispielvideo (freie Stock-Aufnahme, Fahrszene) — hier später echtes Fahrschul-Video von Oguzhan einsetzen.</div>
+
+<header>
+  <div class="container nav-inner">
+    <a href="#" class="brand"><span class="script">Oguzhan</span><span class="sub">Fahrschule</span></a>
+    <div class="nav-links">
+      <a href="#angebot">Fahrstunden</a>
+      <a href="#angebot">VKU</a>
+      <a href="#bewertungen">Bewertung &amp; Fahrschüler</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-video-wrap">
+    <video autoplay muted loop playsinline poster="../images/hero.jpg">
+      <source src="https://assets.mixkit.co/videos/4521/4521-720.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Professionell weg mit dem <span class="x">Führerschein.</span></h1>
+    <div class="hero-actions">
+      <a href="https://wa.me/41522601010" class="btn btn-blue" target="_blank" rel="noopener">Fahrstunde buchen</a>
+      <a href="#angebot" class="btn btn-dark">Mehr erfahren</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="info-row">
+      <div class="info-card">
+        <span class="eyebrow">Erlebe Fahrspass….</span>
+        <h2>Fahrschule Oguzhan Frauenfeld</h2>
+        <p class="strong">Seriöse, freundliche und effiziente Ausbildung erwartet dich — mit über 25 Jahren Erfahrung in Frauenfeld.</p>
+        <p>Als eidgenössisch diplomierter Fahrlehrer und Mitglied des VFK stehe ich für Qualität &amp; Professionalität, auf Deutsch, Türkisch oder Englisch.</p>
+        <a href="#angebot" class="btn btn-dark">Fahrstunden</a>
+      </div>
+      <div class="info-photo"><img src="../images/car-interior.jpg" alt="Fahrschulauto Innenraum" /></div>
+    </div>
+
+    <div class="cta-band">
+      <h2>Fahrstunde online buchen</h2>
+      <p>Jetzt Fahrstunden online buchen</p>
+      <a href="https://wa.me/41522601010" class="btn btn-blue" target="_blank" rel="noopener">Fahrstunde buchen</a>
+    </div>
+
+    <div class="info-row reverse" id="angebot">
+      <div class="info-photo"><img src="../images/steering2.jpg" alt="Verkehrskunde Unterricht" /></div>
+      <div class="info-card">
+        <span class="eyebrow">Erlebe spannenden Verkehrskundeunterricht….</span>
+        <h2>Verkehrskunde Unterricht Frauenfeld</h2>
+        <p class="strong">Eine seriöse, praxisnahe und abwechslungsreiche Ausbildung erwartet dich in angenehmer Lernatmosphäre.</p>
+        <p>Der VKU vermittelt dir nicht nur das nötige Wissen, sondern macht dich sicherer und selbstbewusster im Strassenverkehr.</p>
+        <a href="#kontakt" class="btn btn-dark">Mehr Infos zum VKU</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="trust">
+  <div class="trust-item"><strong>25+</strong><span>Jahre Erfahrung</span></div>
+  <div class="trust-item"><strong>94 %</strong><span>Bestehensquote</span></div>
+  <div class="trust-item"><strong>500+</strong><span>Absolventen</span></div>
+  <div class="trust-item"><strong>DE·TR·EN</strong><span>Sprachen</span></div>
+</div>
+
+<section class="section" id="bewertungen">
+  <div class="container">
+    <div class="reviews-head"><h2>Bewertung &amp; Fahrschüler</h2></div>
+    <div class="reviews-grid">
+      <div class="review">
+        <div class="review-top"><div class="av">L</div><div><strong>Laura M.</strong><span>vor 3 Monaten</span></div></div>
+        <div class="stars">★★★★★</div>
+        <p>„Oguzhan ist megageduldig und erklärt alles super verständlich. Beim ersten Versuch bestanden — mega!"</p>
+      </div>
+      <div class="review">
+        <div class="review-top"><div class="av">T</div><div><strong>Tobias R.</strong><span>vor 5 Monaten</span></div></div>
+        <div class="stars">★★★★★</div>
+        <p>„Flexible Termine auch abends nach der Arbeit — das war für mich entscheidend. Klare Empfehlung!"</p>
+      </div>
+      <div class="review">
+        <div class="review-top"><div class="av">Y</div><div><strong>Yusuf A.</strong><span>vor 8 Monaten</span></div></div>
+        <div class="stars">★★★★★</div>
+        <p>„Den VKU auf Türkisch zu machen war ein Gamechanger für mich. Erklärt Dinge, die man so nirgends liest."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer" id="kontakt">
+  <div class="footer-grid">
+    <div>
+      <h3>Kontakt</h3>
+      <div class="footer-contact-item"><span class="ic">👤</span> Oguzhan</div>
+      <div class="footer-contact-item"><span class="ic">💬</span> <a href="https://wa.me/41522601010" target="_blank" rel="noopener">052 260 10 10</a></div>
+      <div class="footer-contact-item"><span class="ic">✉️</span> <a href="mailto:oguzhan@fahrschule-oguzhan.ch">oguzhan@fahrschule-oguzhan.ch</a></div>
+    </div>
+    <div>
+      <h3>Kurslokal</h3>
+      <iframe class="map-embed" loading="lazy" src="https://www.google.com/maps?q=Bahnhofstrasse+45,+8500+Frauenfeld&output=embed" title="Standort Fahrschule Oguzhan"></iframe>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2025 Fahrschule Oguzhan · Bahnhofstrasse 45, 8500 Frauenfeld</div>
+</footer>
+
+</body>
+</html>

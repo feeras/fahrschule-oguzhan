@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Konzept 01 – Minimal Zero | Fahrschule Oguzhan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet" />
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: #FAFAF8;
+    color: #111;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 8vh 24px;
+  }
+  .tag { font-size: .72rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: #999; margin-bottom: 28px; }
+  h1 { font-size: clamp(2.4rem, 8vw, 5.2rem); font-weight: 900; line-height: 1.03; letter-spacing: -.02em; max-width: 900px; }
+  h1 span { color: #F59E0B; }
+  .sub { margin-top: 22px; font-size: clamp(1rem, 2vw, 1.25rem); color: #555; max-width: 480px; line-height: 1.6; }
+  .cta {
+    margin-top: 44px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #111;
+    color: #fff;
+    padding: 18px 38px;
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    text-decoration: none;
+    transition: transform .2s ease, background .2s ease;
+  }
+  .cta:hover { background: #25D366; transform: translateY(-2px); }
+  .services { margin-top: 40px; font-size: .95rem; color: #777; letter-spacing: .02em; }
+  .services b { color: #111; font-weight: 600; }
+  footer { margin-top: 60px; font-size: .8rem; color: #aaa; }
+  footer a { color: #aaa; }
+</style>
+</head>
+<body>
+  <p class="tag">Fahrschule Oguzhan · Frauenfeld</p>
+  <h1>Fahren lernen.<br /><span>Ohne Stress.</span></h1>
+  <p class="sub">25+ Jahre Erfahrung. 94 % bestehen beim ersten Mal. Persönlich, direkt, auf Türkisch, Deutsch oder Englisch.</p>
+  <a href="https://wa.me/41522601010" class="cta" target="_blank" rel="noopener">Jetzt per WhatsApp melden →</a>
+  <p class="services">Auto <b>·</b> Motorrad <b>·</b> Nothelferkurs <b>·</b> VKU <b>·</b> Theorie</p>
+  <footer>052 260 10 10 · Bahnhofstrasse 45, 8500 Frauenfeld</footer>
+</body>
+</html>

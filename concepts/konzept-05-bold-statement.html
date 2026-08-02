@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Konzept 05 – Bold Statement | Fahrschule Oguzhan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  :root { --bg: #050505; --yellow: #E8FF3C; --white: #fff; --muted: rgba(255,255,255,.55); --border: rgba(255,255,255,.12); }
+  body { font-family: 'Space Grotesk', system-ui, sans-serif; background: var(--bg); color: #fff; }
+  .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+  a { color: inherit; text-decoration: none; }
+
+  header { display: flex; align-items: center; justify-content: space-between; padding: 26px 24px; max-width: 1140px; margin: 0 auto; }
+  .brand { font-weight: 700; font-size: 1.1rem; letter-spacing: -.02em; }
+  .brand span { color: var(--yellow); }
+  .nav-cta { border: 1px solid var(--white); padding: 10px 20px; border-radius: 0; font-weight: 600; font-size: .85rem; }
+  .nav-cta:hover { background: #fff; color: #000; }
+
+  .marquee { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); overflow: hidden; padding: 14px 0; white-space: nowrap; }
+  .marquee-track { display: inline-block; animation: scroll 22s linear infinite; font-weight: 700; font-size: 1rem; letter-spacing: .02em; }
+  .marquee-track span { color: var(--yellow); margin: 0 10px; }
+  @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+  .hero { padding: 70px 24px 40px; text-align: left; }
+  .hero h1 { font-size: clamp(3rem, 9vw, 7rem); font-weight: 700; line-height: .95; letter-spacing: -.03em; max-width: 1000px; }
+  .hero h1 .out { -webkit-text-stroke: 2px #fff; color: transparent; }
+  .hero-row { display: flex; justify-content: space-between; align-items: flex-end; margin-top: 40px; gap: 24px; flex-wrap: wrap; }
+  .hero p { color: var(--muted); max-width: 380px; font-size: 1.05rem; }
+  .btn-yellow { background: var(--yellow); color: #000; padding: 18px 34px; font-weight: 700; font-size: 1rem; display: inline-block; }
+
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-top: 60px; }
+  .stat { padding: 32px 24px; border-right: 1px solid var(--border); }
+  .stat:last-child { border-right: none; }
+  .stat strong { font-size: 2.4rem; font-weight: 700; display: block; }
+  .stat span { color: var(--muted); font-size: .82rem; text-transform: uppercase; letter-spacing: .06em; }
+
+  .section { padding: 80px 0; }
+  .section-title { font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 700; letter-spacing: -.02em; margin-bottom: 40px; }
+  .section-title .out { -webkit-text-stroke: 1.5px #fff; color: transparent; }
+
+  .services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); }
+  .svc { background: var(--bg); padding: 32px 26px; }
+  .svc h3 { font-size: 1.3rem; margin-bottom: 10px; }
+  .svc p { color: var(--muted); font-size: .9rem; margin-bottom: 16px; }
+  .svc .price { color: var(--yellow); font-weight: 700; font-size: 1.1rem; }
+
+  .cta-final { text-align: center; padding: 100px 24px; }
+  .cta-final h2 { font-size: clamp(2rem, 6vw, 4rem); font-weight: 700; margin-bottom: 30px; letter-spacing: -.02em; }
+  .cta-final .btn-yellow { font-size: 1.1rem; padding: 20px 44px; }
+
+  footer { border-top: 1px solid var(--border); padding: 24px; display: flex; justify-content: space-between; color: var(--muted); font-size: .82rem; max-width: 1140px; margin: 0 auto; flex-wrap: wrap; gap: 8px; }
+
+  @media (max-width: 860px) {
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .stat:nth-child(2) { border-right: none; }
+    .services { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 620px) {
+    .services { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">FAHRSCHULE <span>OGUZHAN</span></div>
+  <a href="https://wa.me/41522601010" class="nav-cta" target="_blank" rel="noopener">KONTAKT</a>
+</header>
+
+<div class="marquee">
+  <div class="marquee-track">
+    FÜHRERSCHEIN <span>·</span> AUTO <span>·</span> MOTORRAD <span>·</span> VKU <span>·</span> NOTHELFERKURS <span>·</span> FRAUENFELD <span>·</span>
+    FÜHRERSCHEIN <span>·</span> AUTO <span>·</span> MOTORRAD <span>·</span> VKU <span>·</span> NOTHELFERKURS <span>·</span> FRAUENFELD <span>·</span>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="container">
+    <h1>DU WILLST<br />FAHREN. <span class="out">JETZT.</span></h1>
+    <div class="hero-row">
+      <p>Keine Umwege, kein Blabla. Ich bring dich in Rekordzeit sicher zum Fahrausweis — Frauenfeld und Thurgau.</p>
+      <a href="https://wa.me/41522601010" class="btn-yellow" target="_blank" rel="noopener">JETZT STARTEN →</a>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="stat"><strong>25+</strong><span>Jahre Erfahrung</span></div>
+  <div class="stat"><strong>94%</strong><span>Bestehensquote</span></div>
+  <div class="stat"><strong>500+</strong><span>Absolventen</span></div>
+  <div class="stat"><strong>3</strong><span>Sprachen</span></div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">WAS WIR <span class="out">BIETEN</span></h2>
+    <div class="services">
+      <div class="svc"><h3>Auto — Kat. B</h3><p>Manuell &amp; Automat, dein Tempo.</p><span class="price">ab CHF 98.–</span></div>
+      <div class="svc"><h3>Motorrad — Kat. A</h3><p>Freiheit auf zwei Rädern.</p><span class="price">ab CHF 108.–</span></div>
+      <div class="svc"><h3>Nothelferkurs</h3><p>1 Tag, praxisnah, fertig.</p><span class="price">CHF 175.–</span></div>
+      <div class="svc"><h3>VKU</h3><p>Interaktiv statt langweilig.</p><span class="price">CHF 295.–</span></div>
+      <div class="svc"><h3>Theorie</h3><p>6 Lektionen + Lernplattform.</p><span class="price">CHF 240.–</span></div>
+      <div class="svc"><h3>WAB</h3><p>Nach der Probezeit Pflicht.</p><span class="price">ab CHF 280.–</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-final">
+  <h2>BEREIT? <span style="color:var(--yellow)">LOS GEHT'S.</span></h2>
+  <a href="https://wa.me/41522601010" class="btn-yellow" target="_blank" rel="noopener">JETZT PER WHATSAPP →</a>
+</div>
+
+<footer>
+  <span>© 2025 FAHRSCHULE OGUZHAN</span>
+  <span>052 260 10 10 · BAHNHOFSTRASSE 45, FRAUENFELD</span>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Konzept 12 – Bojan-Style Dunkel/Rot | Fahrschule Oguzhan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  :root {
+    --rose: #D9695C; --rose-deep: #EA8672; --rose-soft: rgba(217,105,92,.16); --rose-line: rgba(217,105,92,.32);
+    --text: #F4ECE9; --muted: #B3A29D; --bg: #120E0D; --card: #1C1411; --card-2: #241A16;
+    --radius: 22px; --radius-sm: 14px;
+    --shadow: 0 20px 45px rgba(0,0,0,.5);
+    --border: rgba(255,255,255,.07);
+  }
+  body { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; color: var(--text); background: var(--bg); line-height: 1.65; }
+  .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+  a { text-decoration: none; color: inherit; }
+  h1, h2, h3 { font-weight: 700; }
+
+  .placeholder-note { background: #241310; color: var(--rose); text-align: center; font-size: .78rem; padding: 8px 16px; border-bottom: 1px solid var(--rose-line); }
+
+  /* decorative blobs */
+  .blob { position: fixed; border-radius: 50%; filter: blur(70px); opacity: .28; z-index: -1; pointer-events: none; }
+  .blob-1 { width: 460px; height: 460px; background: var(--rose); top: -140px; right: -120px; }
+  .blob-2 { width: 380px; height: 380px; background: #E0895A; bottom: 8%; left: -150px; opacity: .18; }
+
+  /* ═══ NAV (dark glass) ═══ */
+  header { position: sticky; top: 0; z-index: 30; background: rgba(18,14,13,.78); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--rose-line); }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1140px; margin: 0 auto; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.05rem; color: var(--text); }
+  .brand .mark { width: 38px; height: 38px; border-radius: 12px; background: var(--rose); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; }
+  .nav-links { display: flex; gap: 28px; }
+  .nav-links a { color: var(--text); font-weight: 500; font-size: .9rem; opacity: .72; }
+  .nav-links a:hover { opacity: 1; color: var(--rose); }
+  .nav-cta { background: var(--rose); color: #fff; padding: 11px 22px; border-radius: 100px; font-weight: 600; font-size: .85rem; }
+  .nav-cta:hover { background: var(--rose-deep); }
+
+  /* ═══ VIDEO HERO (framed, rounded, modern) ═══ */
+  .hero { padding: 48px 24px 20px; max-width: 1140px; margin: 0 auto; }
+  .hero-frame { position: relative; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); height: 78vh; min-height: 480px; }
+  .hero-frame video { width: 100%; height: 100%; object-fit: cover; }
+  .hero-overlay { position: absolute; inset: 0; background: linear-gradient(0deg, rgba(10,7,6,.72) 0%, rgba(10,7,6,.2) 45%, rgba(217,105,92,.28) 100%); }
+  .hero-content { position: absolute; left: 40px; right: 40px; bottom: 40px; z-index: 1; color: #fff; }
+  .hero-eyebrow { display: inline-block; background: rgba(255,255,255,.14); backdrop-filter: blur(6px); padding: 6px 14px; border-radius: 100px; font-size: .78rem; font-weight: 600; letter-spacing: .04em; margin-bottom: 18px; }
+  .hero h1 { font-size: clamp(1.9rem, 4.4vw, 3.2rem); font-weight: 700; line-height: 1.18; max-width: 620px; color: #fff; }
+  .hero h1 .accent { color: var(--rose); font-weight: 800; }
+  .hero-actions { margin-top: 26px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn { display: inline-block; padding: 14px 28px; border-radius: 100px; font-weight: 700; font-size: .88rem; }
+  .btn-rose { background: var(--rose); color: #fff; }
+  .btn-rose:hover { background: var(--rose-deep); }
+  .btn-glass { background: rgba(255,255,255,.14); backdrop-filter: blur(6px); color: #fff; border: 1px solid rgba(255,255,255,.35); }
+  .btn-glass:hover { background: rgba(255,255,255,.24); }
+  .btn-dark { background: rgba(255,255,255,.06); color: var(--text); border: 1px solid rgba(255,255,255,.16); }
+  .btn-dark:hover { background: rgba(255,255,255,.12); }
+
+  /* ═══ SECTIONS ═══ */
+  .section { padding: 56px 0; }
+  .info-row { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: stretch; margin-bottom: 24px; }
+  .info-row.reverse { direction: rtl; }
+  .info-row.reverse > * { direction: ltr; }
+  .info-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 44px; display: flex; flex-direction: column; justify-content: center; box-shadow: var(--shadow); }
+  .info-card .eyebrow { font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; color: var(--rose); font-weight: 700; margin-bottom: 10px; }
+  .info-card h2 { font-size: 1.55rem; margin-bottom: 14px; }
+  .info-card p { color: var(--muted); font-size: .93rem; margin-bottom: 10px; }
+  .info-card .btn { align-self: flex-start; margin-top: 14px; }
+  .info-photo { border-radius: var(--radius); overflow: hidden; min-height: 280px; box-shadow: var(--shadow); border: 1px solid var(--border); }
+  .info-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+  /* ═══ CTA BAND (dark maroon gradient, red accent stays subtle) ═══ */
+  .cta-band { background: linear-gradient(135deg, #2A1613 0%, #1A1210 100%); border: 1px solid var(--rose-line); border-radius: var(--radius); text-align: center; padding: 48px 24px; margin: 40px 0; }
+  .cta-band h2 { font-size: 1.4rem; margin-bottom: 6px; color: var(--text); }
+  .cta-band p { color: var(--muted); font-size: .9rem; margin-bottom: 22px; }
+
+  /* ═══ TRUST STRIP ═══ */
+  .trust { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 16px; padding: 8px 24px 48px; }
+  .trust-item { text-align: center; }
+  .trust-item strong { display: block; font-size: 1.7rem; font-weight: 800; color: var(--rose); }
+  .trust-item span { font-size: .74rem; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
+
+  /* ═══ REVIEWS ═══ */
+  .reviews-head { text-align: center; margin-bottom: 28px; }
+  .reviews-head h2 { font-size: 1.5rem; color: var(--text); }
+  .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .review { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 24px; box-shadow: var(--shadow); }
+  .review-top { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+  .av { width: 38px; height: 38px; border-radius: 50%; background: var(--rose-soft); color: var(--rose); display: flex; align-items: center; justify-content: center; font-weight: 800; flex-shrink: 0; }
+  .review-top strong { font-size: .88rem; display: block; color: var(--text); }
+  .review-top span { color: var(--muted); font-size: .72rem; }
+  .review .stars { color: #E8B84A; font-size: .82rem; margin-bottom: 8px; }
+  .review p { color: rgba(244,236,233,.78); font-size: .87rem; }
+
+  /* ═══ FOOTER ═══ */
+  footer.site-footer { background: #0E0B0A; border-top: 1px solid var(--rose-line); padding: 48px 24px 32px; margin-top: 40px; }
+  .footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 1140px; margin: 0 auto; }
+  .footer-grid h3 { font-size: 1.05rem; margin-bottom: 18px; color: var(--text); }
+  .footer-contact-item { display: flex; align-items: center; gap: 10px; color: rgba(244,236,233,.85); font-size: .9rem; margin-bottom: 12px; }
+  .footer-contact-item .ic { width: 32px; height: 32px; border-radius: 50%; background: var(--rose-soft); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .map-wrap { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 10px; }
+  .map-embed { border-radius: 10px; overflow: hidden; height: 200px; border: none; width: 100%; display: block; filter: saturate(.85) brightness(.92); }
+  .footer-bottom { text-align: center; margin-top: 32px; color: var(--muted); font-size: .78rem; }
+
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+    .info-row, .info-row.reverse { grid-template-columns: 1fr; direction: ltr; }
+    .info-photo { min-height: 220px; }
+    .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-grid { grid-template-columns: 1fr; }
+    .hero-content { left: 20px; right: 20px; bottom: 24px; }
+    .info-card { padding: 30px; }
+  }
+  @media (max-width: 620px) {
+    .reviews-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="blob blob-1"></div>
+<div class="blob blob-2"></div>
+
+<div class="placeholder-note">Beispielvideo (freie Stock-Aufnahme, Fahrszene) — hier später echtes Fahrschul-Video von Oguzhan einsetzen.</div>
+
+<header>
+  <div class="container nav-inner">
+    <a href="#" class="brand"><span class="mark">O</span> Fahrschule Oguzhan</a>
+    <div class="nav-links">
+      <a href="#angebot">Fahrstunden</a>
+      <a href="#angebot">VKU</a>
+      <a href="#bewertungen">Bewertungen</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+    <a href="https://wa.me/41522601010" class="nav-cta" target="_blank" rel="noopener">Jetzt buchen</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-frame">
+    <video autoplay muted loop playsinline poster="../images/hero.jpg">
+      <source src="https://assets.mixkit.co/videos/4521/4521-720.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-eyebrow">Fahrschule Oguzhan · Frauenfeld</span>
+      <h1>Fahren lernen, <span class="accent">modern</span> und entspannt gedacht.</h1>
+      <div class="hero-actions">
+        <a href="https://wa.me/41522601010" class="btn btn-rose" target="_blank" rel="noopener">Fahrstunde buchen</a>
+        <a href="#angebot" class="btn btn-glass">Angebot ansehen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="info-row">
+      <div class="info-card">
+        <span class="eyebrow">Erlebe Fahrspass</span>
+        <h2>Fahrschule Oguzhan Frauenfeld</h2>
+        <p>Seriöse, freundliche und effiziente Ausbildung erwartet dich — mit über 25 Jahren Erfahrung in Frauenfeld.</p>
+        <p>Als eidgenössisch diplomierter Fahrlehrer stehe ich für Qualität &amp; Professionalität, auf Deutsch, Türkisch oder Englisch.</p>
+        <a href="#angebot" class="btn btn-dark">Fahrstunden</a>
+      </div>
+      <div class="info-photo"><img src="../images/car-interior.jpg" alt="Fahrschulauto" /></div>
+    </div>
+
+    <div class="cta-band">
+      <h2>Fahrstunde online buchen</h2>
+      <p>Jetzt Fahrstunden online buchen — unkompliziert per WhatsApp</p>
+      <a href="https://wa.me/41522601010" class="btn btn-rose" target="_blank" rel="noopener">Fahrstunde buchen</a>
+    </div>
+
+    <div class="info-row reverse" id="angebot">
+      <div class="info-photo"><img src="../images/steering2.jpg" alt="Verkehrskunde Unterricht" /></div>
+      <div class="info-card">
+        <span class="eyebrow">Erlebe spannenden Verkehrskundeunterricht</span>
+        <h2>Verkehrskunde Unterricht Frauenfeld</h2>
+        <p>Eine seriöse, praxisnahe und abwechslungsreiche Ausbildung erwartet dich in angenehmer Lernatmosphäre.</p>
+        <p>Der VKU vermittelt dir nicht nur das nötige Wissen, sondern macht dich sicherer im Strassenverkehr.</p>
+        <a href="#kontakt" class="btn btn-dark">Mehr Infos zum VKU</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="trust">
+  <div class="trust-item"><strong>25+</strong><span>Jahre Erfahrung</span></div>
+  <div class="trust-item"><strong>94 %</strong><span>Bestehensquote</span></div>
+  <div class="trust-item"><strong>500+</strong><span>Absolventen</span></div>
+  <div class="trust-item"><strong>DE·TR·EN</strong><span>Sprachen</span></div>
+</div>
+
+<section class="section" id="bewertungen">
+  <div class="container">
+    <div class="reviews-head"><h2>Bewertung &amp; Fahrschüler</h2></div>
+    <div class="reviews-grid">
+      <div class="review">
+        <div class="review-top"><div class="av">L</div><div><strong>Laura M.</strong><span>vor 3 Monaten</span></div></div>
+        <div class="stars">★★★★★</div>
+        <p>„Oguzhan ist megageduldig und erklärt alles super verständlich. Beim ersten Versuch bestanden — mega!"</p>
+      </div>
+      <div class="review">
+        <div class="review-top"><div class="av">T</div><div><strong>Tobias R.</strong><span>vor 5 Monaten</span></div></div>
+        <div class="stars">★★★★★</div>
+        <p>„Flexible Termine auch abends nach der Arbeit — das war für mich entscheidend. Klare Empfehlung!"</p>
+      </div>
+      <div class="review">
+        <div class="review-top"><div class="av">Y</div><div><strong>Yusuf A.</strong><span>vor 8 Monaten</span></div></div>
+        <div class="stars">★★★★★</div>
+        <p>„Den VKU auf Türkisch zu machen war ein Gamechanger für mich. Erklärt Dinge, die man so nirgends liest."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer" id="kontakt">
+  <div class="footer-grid">
+    <div>
+      <h3>Kontakt</h3>
+      <div class="footer-contact-item"><span class="ic">👤</span> Oguzhan</div>
+      <div class="footer-contact-item"><span class="ic">💬</span> <a href="https://wa.me/41522601010" target="_blank" rel="noopener">052 260 10 10</a></div>
+      <div class="footer-contact-item"><span class="ic">✉️</span> <a href="mailto:oguzhan@fahrschule-oguzhan.ch">oguzhan@fahrschule-oguzhan.ch</a></div>
+    </div>
+    <div>
+      <h3>Kurslokal</h3>
+      <div class="map-wrap">
+        <iframe class="map-embed" loading="lazy" src="https://www.google.com/maps?q=Bahnhofstrasse+45,+8500+Frauenfeld&output=embed" title="Standort Fahrschule Oguzhan"></iframe>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2025 Fahrschule Oguzhan · Bahnhofstrasse 45, 8500 Frauenfeld</div>
+</footer>
+
+</body>
+</html>

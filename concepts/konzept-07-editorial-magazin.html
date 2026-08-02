@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Konzept 07 – Editorial Magazin | Fahrschule Oguzhan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,500&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  :root { --ink: #201C18; --paper: #F7F4EE; --burgundy: #7A2E2E; --muted: #766F64; --border: #E3DDD1; }
+  body { font-family: 'Source Sans 3', system-ui, sans-serif; background: var(--paper); color: var(--ink); line-height: 1.7; }
+  h1, h2, .serif { font-family: 'Playfair Display', serif; }
+  .container { max-width: 980px; margin: 0 auto; padding: 0 24px; }
+  a { color: inherit; text-decoration: none; }
+
+  .masthead { text-align: center; padding: 30px 24px 20px; border-bottom: 2px solid var(--ink); }
+  .masthead .kicker { font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+  .masthead h1 { font-size: 2.1rem; font-weight: 800; letter-spacing: -.01em; }
+  .masthead .issue { margin-top: 8px; font-size: .78rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
+
+  .hero-photo { max-width: 980px; margin: 0 auto; }
+  .hero-photo img { width: 100%; height: 460px; object-fit: cover; }
+  .caption { max-width: 980px; margin: 8px auto 0; padding: 0 24px; font-size: .8rem; color: var(--muted); font-style: italic; }
+
+  .article { padding: 50px 0 70px; }
+  .article-head { text-align: center; max-width: 680px; margin: 0 auto 40px; }
+  .eyebrow { color: var(--burgundy); font-weight: 700; font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 10px; display: block; }
+  .article h2 { font-size: 2.4rem; font-style: italic; font-weight: 600; margin-bottom: 16px; line-height: 1.2; }
+  .byline { font-size: .85rem; color: var(--muted); }
+
+  .article-body { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; max-width: 900px; margin: 0 auto; }
+  .article-body p { margin-bottom: 16px; font-size: 1.02rem; }
+  .drop::first-letter { font-family: 'Playfair Display', serif; font-size: 3.6rem; font-weight: 800; float: left; line-height: .8; margin: 6px 8px 0 0; color: var(--burgundy); }
+
+  .pull-quote { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.7rem; color: var(--burgundy); text-align: center; max-width: 640px; margin: 60px auto; line-height: 1.4; }
+  .pull-quote span { display: block; font-family: 'Source Sans 3', sans-serif; font-style: normal; font-size: .8rem; color: var(--muted); margin-top: 14px; text-transform: uppercase; letter-spacing: .06em; }
+
+  .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; max-width: 980px; margin: 0 auto 60px; }
+  .gallery img { width: 100%; height: 220px; object-fit: cover; }
+
+  .services-editorial { max-width: 900px; margin: 0 auto 70px; padding: 0 24px; }
+  .services-editorial h3 { font-size: 1.5rem; margin-bottom: 24px; text-align: center; }
+  .svc-list { border-top: 1px solid var(--border); }
+  .svc-row { display: flex; justify-content: space-between; align-items: baseline; padding: 18px 0; border-bottom: 1px solid var(--border); }
+  .svc-row .name { font-size: 1.1rem; font-family: 'Playfair Display', serif; }
+  .svc-row .desc { color: var(--muted); font-size: .88rem; flex: 1; margin: 0 24px; }
+  .svc-row .price { font-weight: 600; white-space: nowrap; }
+
+  .closing { text-align: center; padding: 0 24px 80px; }
+  .closing p { max-width: 480px; margin: 0 auto 24px; color: var(--muted); }
+  .btn-editorial { display: inline-block; border: 2px solid var(--ink); padding: 14px 32px; font-weight: 600; font-size: .92rem; letter-spacing: .03em; }
+  .btn-editorial:hover { background: var(--ink); color: var(--paper); }
+
+  footer { border-top: 2px solid var(--ink); padding: 24px; text-align: center; font-size: .8rem; color: var(--muted); }
+
+  @media (max-width: 800px) {
+    .article-body { grid-template-columns: 1fr; }
+    .gallery { grid-template-columns: 1fr 1fr; }
+    .hero-photo img { height: 280px; }
+  }
+  @media (max-width: 560px) {
+    .svc-row { flex-direction: column; align-items: flex-start; gap: 4px; }
+    .svc-row .desc { margin: 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="masthead">
+  <p class="kicker">Frauenfeld · Thurgau</p>
+  <h1>Fahrschule Oguzhan</h1>
+  <p class="issue">Ein Porträt — Ausgabe 2025</p>
+</div>
+
+<div class="hero-photo"><img src="../images/hero.jpg" alt="Fahrstunde bei Sonnenuntergang" /></div>
+<p class="caption">Auf der Landstrasse bei Frauenfeld: eine ganz normale Fahrstunde.</p>
+
+<article class="article">
+  <div class="container article-head">
+    <span class="eyebrow">Reportage</span>
+    <h2>Wie man in Frauenfeld das Fahren lernt, ohne Angst zu haben</h2>
+    <p class="byline">Ein Porträt von Fahrlehrer Oguzhan, eidg. dipl., seit 25 Jahren im Amt</p>
+  </div>
+
+  <div class="container article-body">
+    <p class="drop">Es ist kurz nach acht Uhr morgens, als Oguzhan sein Fahrschulauto vor dem Bahnhof Frauenfeld parkt. Seit über 25 Jahren beginnt sein Tag so — mit einem Blick auf die Liste seiner Fahrschülerinnen und Fahrschüler und der Frage, wer heute wohl am meisten Übung braucht.</p>
+    <p>„Keine dummen Fragen — jede Frage bringt dich weiter", sagt er, während er den Motor startet. Es ist ein Satz, den er offenbar oft wiederholt. Seine Schülerinnen und Schüler bestätigen das: 94 Prozent von ihnen bestehen die Prüfung beim ersten Versuch.</p>
+    <p>Oguzhan unterrichtet auf Deutsch, Türkisch und Englisch — eine Selbstverständlichkeit, die in vielen Fahrschulen im Thurgau nicht gegeben ist. Für viele seiner Schülerinnen und Schüler mit türkischem Hintergrund macht genau das den Unterschied.</p>
+    <p>Sein Angebot reicht von der klassischen Kategorie B über Motorradausbildung bis hin zu Nothelferkursen und Verkehrskunde. Alles aus einer Hand, alles persönlich begleitet.</p>
+  </div>
+
+  <div class="pull-quote">
+    „Fehler sind kein Problem — sie sind der schnellste Weg zum Lernen."
+    <span>— Oguzhan, Fahrlehrer</span>
+  </div>
+
+  <div class="gallery">
+    <img src="../images/car-interior.jpg" alt="Im Fahrschulauto" />
+    <img src="../images/motorcycle.jpg" alt="Motorradausbildung" />
+    <img src="../images/country-road.jpg" alt="Landstrasse Thurgau" />
+  </div>
+
+  <div class="services-editorial">
+    <h3>Das Angebot im Überblick</h3>
+    <div class="svc-list">
+      <div class="svc-row"><span class="name">Auto — Kat. B</span><span class="desc">Manuell &amp; Automat, individuelles Tempo</span><span class="price">ab CHF 98.–</span></div>
+      <div class="svc-row"><span class="name">Motorrad — Kat. A/A1</span><span class="desc">Inkl. Schulungsmotorrad</span><span class="price">ab CHF 108.–</span></div>
+      <div class="svc-row"><span class="name">Nothelferkurs</span><span class="desc">Ein Tag, max. 12 Personen</span><span class="price">CHF 175.–</span></div>
+      <div class="svc-row"><span class="name">Verkehrskunde VKU</span><span class="desc">Zwei Tage, interaktiv gestaltet</span><span class="price">CHF 295.–</span></div>
+      <div class="svc-row"><span class="name">Theorieunterricht</span><span class="desc">Sechs Lektionen inkl. Lernplattform</span><span class="price">CHF 240.–</span></div>
+    </div>
+  </div>
+
+  <div class="closing">
+    <p>Wer selbst erleben möchte, wovon hier die Rede ist, muss nicht lange suchen.</p>
+    <a href="https://wa.me/41522601010" class="btn-editorial" target="_blank" rel="noopener">Termin per WhatsApp vereinbaren</a>
+  </div>
+</article>
+
+<footer>© 2025 Fahrschule Oguzhan · Bahnhofstrasse 45, 8500 Frauenfeld · 052 260 10 10</footer>
+
+</body>
+</html>

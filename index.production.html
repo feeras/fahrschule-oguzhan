@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fahrschule Oguzhan | Frauenfeld, Thurgau</title>
+  <meta name="description" content="Fahrschule Oguzhan in Frauenfeld – persönlich, direkt, mit Herzblut. Kat. B, Motorrad, Nothelferkurs, VKU. Meld dich jetzt per WhatsApp!" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ═══ WHATSAPP FLOATING BUTTON ═══ -->
+<a href="https://wa.me/41522601010" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp Oguzhan">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.555 4.112 1.526 5.836L0 24l6.338-1.503A11.956 11.956 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.6a9.559 9.559 0 01-4.91-1.355l-.351-.21-3.762.893.944-3.656-.228-.376A9.561 9.561 0 012.4 12c0-5.295 4.305-9.6 9.6-9.6s9.6 4.305 9.6 9.6-4.305 9.6-9.6 9.6z"/>
+  </svg>
+  <span>WhatsApp</span>
+</a>
+
+<!-- ═══ NAVIGATION ═══ -->
+<nav id="navbar">
+  <div class="nav-container">
+    <a href="#home" class="nav-logo">
+      <span class="logo-mark">O</span>
+      <div>
+        <span class="logo-title">Fahrschule Oguzhan</span>
+        <span class="logo-sub">Frauenfeld · Thurgau</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" onclick="closeMenu()">Über mich</a></li>
+      <li><a href="#angebot" onclick="closeMenu()">Angebot</a></li>
+      <li><a href="#preise" onclick="closeMenu()">Preise</a></li>
+      <li><a href="#ablauf" onclick="closeMenu()">Ablauf</a></li>
+      <li><a href="#kontakt" onclick="closeMenu()">Kontakt</a></li>
+    </ul>
+    <a href="https://wa.me/41522601010" class="nav-wa" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.555 4.112 1.526 5.836L0 24l6.338-1.503A11.956 11.956 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.6a9.559 9.559 0 01-4.91-1.355l-.351-.21-3.762.893.944-3.656-.228-.376A9.561 9.561 0 012.4 12c0-5.295 4.305-9.6 9.6-9.6s9.6 4.305 9.6 9.6-4.305 9.6-9.6 9.6z"/></svg>
+      WhatsApp
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-overlay" id="navOverlay" onclick="closeMenu()"></div>
+
+<!-- ═══ HERO ═══ -->
+<section id="home" class="hero">
+  <div class="hero-bg">
+    <img src="images/hero.jpg" alt="Fahren mit Oguzhan" class="hero-img" loading="eager" />
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Fahrschule Oguzhan · Frauenfeld, Thurgau</p>
+    <h1>Bereit für deinen<br /><span class="hero-accent">Führerschein?</span></h1>
+    <p class="hero-sub">Ich bring dich sicher, entspannt und ohne unnötigen Stress zum Fahrausweis. Persönlich, flexibel, auf dein Tempo angepasst.</p>
+    <div class="hero-actions">
+      <a href="https://wa.me/41522601010" class="btn btn-wa" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.555 4.112 1.526 5.836L0 24l6.338-1.503A11.956 11.956 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.6a9.559 9.559 0 01-4.91-1.355l-.351-.21-3.762.893.944-3.656-.228-.376A9.561 9.561 0 012.4 12c0-5.295 4.305-9.6 9.6-9.6s9.6 4.305 9.6 9.6-4.305 9.6-9.6 9.6z"/></svg>
+        Jetzt per WhatsApp melden
+      </a>
+      <a href="#preise" class="btn btn-ghost">Preise ansehen</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hstat"><strong>25+</strong><span>Jahre Erfahrung</span></div>
+      <div class="hstat-div"></div>
+      <div class="hstat"><strong>94 %</strong><span>Bestehensquote</span></div>
+      <div class="hstat-div"></div>
+      <div class="hstat"><strong>DE / TR / EN</strong><span>Sprachen</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ÜBER OGUZHAN ═══ -->
+<section id="about" class="section about-section">
+  <div class="container about-grid">
+    <div class="about-img-col">
+      <div class="about-img-wrap">
+        <img src="images/oguzhan.jpg" alt="Fahrlehrer Oguzhan" loading="lazy" />
+      </div>
+      <div class="about-quote">
+        <p>„Keine dummen Fragen — jede Frage bringt dich weiter."</p>
+        <span>— Oguzhan</span>
+      </div>
+    </div>
+    <div class="about-text">
+      <span class="label">Dein Fahrlehrer</span>
+      <h2>Hoi, ich bin Oguzhan.</h2>
+      <p class="about-lead">Seit über 25 Jahren bringe ich Menschen in Frauenfeld und dem ganzen Thurgau das Fahren bei. Ich liebe meinen Job — und das merkt man.</p>
+      <p>Mein Unterrichtsstil ist direkt, ruhig und auf dich zugeschnitten. Ich nehme mir Zeit für deine Fragen, erkläre so lange bis es sitzt und setze dich nie unter Druck. Fehler sind bei mir kein Problem — sie sind der schnellste Weg zum Lernen.</p>
+      <p>Ich spreche Deutsch, Türkisch und Englisch. Viele meiner Schülerinnen und Schüler mit türkischem Hintergrund schätzen es, auf Türkisch erklärt zu bekommen was im Strassenverkehr wirklich wichtig ist.</p>
+      <div class="about-tags">
+        <span class="tag">Eidg. dipl. Fahrlehrer</span>
+        <span class="tag">VKU-Instruktor</span>
+        <span class="tag">Nothelferkurs-Leiter</span>
+        <span class="tag">VFK-Mitglied</span>
+      </div>
+      <a href="https://wa.me/41522601010" class="btn btn-orange mt-1" target="_blank" rel="noopener">Direkt schreiben</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ANGEBOT ═══ -->
+<section id="angebot" class="section angebot-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">Was ich anbiete</span>
+      <h2>Mein Angebot</h2>
+      <p>Alles was du für deinen Fahrausweis brauchst — aus einer Hand.</p>
+    </div>
+    <div class="angebot-grid">
+
+      <div class="angebot-card featured">
+        <div class="angebot-img">
+          <img src="images/car-interior.jpg" alt="Auto Fahrausbildung Kat. B" loading="lazy" />
+          <span class="ac-badge">Beliebt</span>
+        </div>
+        <div class="angebot-body">
+          <h3>Auto — Kat. B</h3>
+          <p>Von der ersten Fahrstunde bis zur Prüfung begleite ich dich persönlich. Manuell oder Automat, dein Tempo bestimmt den Fortschritt.</p>
+          <ul class="ac-list">
+            <li>Manuell &amp; Automat</li>
+            <li>Abend- &amp; Wochenendtermine</li>
+            <li>Prüfungsvorbereitung inklusive</li>
+          </ul>
+          <a href="#preise" class="ac-link">Ab CHF 98.– / 45 Min &rarr;</a>
+        </div>
+      </div>
+
+      <div class="angebot-card">
+        <div class="angebot-img">
+          <img src="images/motorcycle.jpg" alt="Motorrad Kat. A" loading="lazy" />
+        </div>
+        <div class="angebot-body">
+          <h3>Motorrad — Kat. A / A1</h3>
+          <p>Freiheit auf zwei Rädern. Mit meiner Erfahrung bekommst du ein solides Fundament für sicheres Motorradfahren.</p>
+          <ul class="ac-list">
+            <li>MOTO-Basis &amp; Ergänzungskurs</li>
+            <li>Schulungsmotorrad verfügbar</li>
+            <li>Sicherheitstraining</li>
+          </ul>
+          <a href="#preise" class="ac-link">Ab CHF 108.– / 45 Min &rarr;</a>
+        </div>
+      </div>
+
+      <div class="angebot-card">
+        <div class="angebot-img">
+          <img src="images/first-aid.jpg" alt="Nothelferkurs" loading="lazy" />
+        </div>
+        <div class="angebot-body">
+          <h3>Nothelferkurs</h3>
+          <p>Pflicht vor dem Fahrausweis — bei mir in kleinen Gruppen, praxisnah und ohne Schaufensterpraktiken. Du lernst das, was wirklich zählt.</p>
+          <ul class="ac-list">
+            <li>1 Tag, max. 12 Personen</li>
+            <li>Zertifikat sofort danach</li>
+            <li>Auf Deutsch oder Türkisch</li>
+          </ul>
+          <a href="#preise" class="ac-link">CHF 175.– &rarr;</a>
+        </div>
+      </div>
+
+      <div class="angebot-card">
+        <div class="angebot-img">
+          <img src="images/steering2.jpg" alt="Verkehrskunde VKU" loading="lazy" />
+        </div>
+        <div class="angebot-body">
+          <h3>Verkehrskunde — VKU</h3>
+          <p>Den VKU gestalte ich interaktiv und ehrlich. Kein trockenes Ablesen — du verstehst danach warum du was tun musst.</p>
+          <ul class="ac-list">
+            <li>2 Tage à 4 Stunden</li>
+            <li>Kleine Gruppen</li>
+            <li>Probezeit-Verlängerung anerkannt</li>
+          </ul>
+          <a href="#preise" class="ac-link">CHF 295.– &rarr;</a>
+        </div>
+      </div>
+
+      <div class="angebot-card">
+        <div class="angebot-img">
+          <img src="images/study.jpg" alt="Theorieunterricht" loading="lazy" />
+        </div>
+        <div class="angebot-body">
+          <h3>Theorie</h3>
+          <p>Gut vorbereitet in die Theorieprüfung. Mit Lern-App, Prüfungssimulation und meiner Unterstützung schaffst du das locker.</p>
+          <ul class="ac-list">
+            <li>6 Lektionen im Paket</li>
+            <li>Lernplattform inklusive</li>
+            <li>Prüfungssimulation</li>
+          </ul>
+          <a href="#preise" class="ac-link">CHF 240.– &rarr;</a>
+        </div>
+      </div>
+
+      <div class="angebot-card">
+        <div class="angebot-img">
+          <img src="images/country-road.jpg" alt="WAB Weiterausbildung" loading="lazy" />
+        </div>
+        <div class="angebot-body">
+          <h3>WAB — Weiterausbildung</h3>
+          <p>Die Pflicht nach der Probezeit — bei mir kein notwendiges Übel, sondern echter Mehrwert. Du fährst danach besser.</p>
+          <ul class="ac-list">
+            <li>WAB 1: Nasse Fahrbahn</li>
+            <li>WAB 2: Ökonomisch fahren</li>
+            <li>Flexible Terminwahl</li>
+          </ul>
+          <a href="#preise" class="ac-link">CHF 280.– / Kurs &rarr;</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PREISE ═══ -->
+<section id="preise" class="section preise-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">Transparenz</span>
+      <h2>Was kostet das?</h2>
+      <p>Keine versteckten Kosten. Alles klar und ehrlich — so wie ich bin.</p>
+    </div>
+
+    <div class="preise-wrap">
+
+      <div class="preise-col">
+        <h3 class="preise-col-title">Fahrstunden</h3>
+        <div class="price-list">
+          <div class="price-item">
+            <span>Auto (Kat. B) — 45 Min.</span>
+            <strong>CHF 98.–</strong>
+          </div>
+          <div class="price-item">
+            <span>Auto (Kat. B) — 60 Min.</span>
+            <strong>CHF 130.–</strong>
+          </div>
+          <div class="price-item highlight">
+            <span>10er-Paket × 45 Min.</span>
+            <strong>CHF 920.–</strong>
+          </div>
+          <div class="price-item">
+            <span>Motorrad (Kat. A) — 45 Min.</span>
+            <strong>CHF 108.–</strong>
+          </div>
+          <div class="price-item">
+            <span>Prüfungsfahrt (inkl. Amtsgebühr)</span>
+            <strong>CHF 200.–</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="preise-divider"></div>
+
+      <div class="preise-col">
+        <h3 class="preise-col-title">Kurse</h3>
+        <div class="price-list">
+          <div class="price-item">
+            <span>Nothelferkurs (1 Tag)</span>
+            <strong>CHF 175.–</strong>
+          </div>
+          <div class="price-item">
+            <span>VKU Verkehrskunde</span>
+            <strong>CHF 295.–</strong>
+          </div>
+          <div class="price-item">
+            <span>Theorieunterricht (6 Lek.)</span>
+            <strong>CHF 240.–</strong>
+          </div>
+          <div class="price-item">
+            <span>WAB 1 oder WAB 2</span>
+            <strong>CHF 280.–</strong>
+          </div>
+          <div class="price-item highlight">
+            <span>WAB Kombi (1 + 2)</span>
+            <strong>CHF 520.–</strong>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="preise-note-box">
+      <strong>Was kostet der Führerschein insgesamt?</strong>
+      Als Richtwert rechne mit <strong>CHF 2 500 – 4 000</strong> für Kat. B inklusive aller Kurse und Prüfungen. Das hängt davon ab, wie schnell du lernst — und das ist bei jedem anders. Ich bespreche das gern offen mit dir.
+      <a href="https://wa.me/41522601010" target="_blank" rel="noopener" class="preise-wa-link">Frag mich per WhatsApp →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ABLAUF ═══ -->
+<section id="ablauf" class="section ablauf-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">Schritt für Schritt</span>
+      <h2>So läuft es ab</h2>
+      <p>Kein Chaos, keine Überraschungen — ich erkläre dir von Anfang an was auf dich zukommt.</p>
+    </div>
+    <div class="ablauf-grid">
+      <div class="ablauf-step">
+        <div class="as-num">01</div>
+        <div class="as-body">
+          <h3>Du meldest dich bei mir</h3>
+          <p>Ein kurzes WhatsApp oder Anruf — ich melde mich innert 24h. Wir besprechen kostenlos deine Ausgangslage und was als nächstes zu tun ist.</p>
+        </div>
+      </div>
+      <div class="ablauf-step">
+        <div class="as-num">02</div>
+        <div class="as-body">
+          <h3>Nothelferkurs &amp; Lernfahrausweis</h3>
+          <p>Zuerst Nothelferkurs, dann Lernfahrausweis beim Strassenverkehrsamt. Ich helfe dir mit den Unterlagen — kein bürokratisches Chaos.</p>
+        </div>
+      </div>
+      <div class="ablauf-step">
+        <div class="as-num">03</div>
+        <div class="as-body">
+          <h3>Theorieprüfung</h3>
+          <p>Mit meinem Theorieunterricht und der Lern-App bist du gut vorbereitet. Die Prüfung wird beim Strassenverkehrsamt abgelegt.</p>
+        </div>
+      </div>
+      <div class="ablauf-step">
+        <div class="as-num">04</div>
+        <div class="as-body">
+          <h3>Fahrstunden mit mir</h3>
+          <p>Wir starten langsam, steigern uns schrittweise. Autobahn, Nachtfahrt, Regen — du bekommst alles. Dein Tempo, meine Geduld.</p>
+        </div>
+      </div>
+      <div class="ablauf-step">
+        <div class="as-num">05</div>
+        <div class="as-body">
+          <h3>VKU — Verkehrskunde</h3>
+          <p>Pflicht — aber bei mir nie langweilig. Du verstehst danach den Strassenverkehr auf einem anderen Level.</p>
+        </div>
+      </div>
+      <div class="ablauf-step highlight-step">
+        <div class="as-num">06</div>
+        <div class="as-body">
+          <h3>Prüfung — du schaffst das!</h3>
+          <p>Ich schicke dich erst in die Prüfung, wenn ich weiss dass du bereit bist. 94 % meiner Schüler bestehen beim ersten Mal.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ STIMMEN ═══ -->
+<section class="section stimmen-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">Was andere sagen</span>
+      <h2>Stimmen meiner Schüler</h2>
+    </div>
+    <div class="stimmen-grid">
+      <div class="stimme">
+        <div class="stimme-stars">★★★★★</div>
+        <p>„Oguzhan ist megageduldig und erklärt alles super verständlich. Beim ersten Versuch bestanden — mega!"</p>
+        <div class="stimme-autor"><div class="sa-av">L</div><div><strong>Laura M.</strong><span>Frauenfeld, 2024</span></div></div>
+      </div>
+      <div class="stimme">
+        <div class="stimme-stars">★★★★★</div>
+        <p>„Flexible Termine auch abends nach der Arbeit — das war für mich entscheidend. Top Fahrschule, klare Empfehlung!"</p>
+        <div class="stimme-autor"><div class="sa-av">T</div><div><strong>Tobias R.</strong><span>Kreuzlingen, 2024</span></div></div>
+      </div>
+      <div class="stimme">
+        <div class="stimme-stars">★★★★★</div>
+        <p>„Den VKU auf Türkisch zu machen war ein Gamechanger für mich. Oguzhan erklärt Dinge die man so nirgends liest."</p>
+        <div class="stimme-autor"><div class="sa-av">Y</div><div><strong>Yusuf A.</strong><span>Weinfelden, 2024</span></div></div>
+      </div>
+      <div class="stimme">
+        <div class="stimme-stars">★★★★★</div>
+        <p>„Nach 10 Jahren Pause wieder ans Steuer — Oguzhan hat mir das Selbstvertrauen zurückgegeben. Einfach klasse!"</p>
+        <div class="stimme-autor"><div class="sa-av">S</div><div><strong>Sandra B.</strong><span>Arbon, 2023</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ KONTAKT ═══ -->
+<section id="kontakt" class="section kontakt-section">
+  <div class="container kontakt-grid">
+
+    <div class="kontakt-left">
+      <span class="label">Los geht's</span>
+      <h2>Meld dich jetzt</h2>
+      <p>Kein langer Papierkram, kein Formular-Dschungel. Schreib mir einfach auf WhatsApp — ich antworte dir persönlich.</p>
+
+      <a href="https://wa.me/41522601010" class="btn btn-wa btn-big" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.555 4.112 1.526 5.836L0 24l6.338-1.503A11.956 11.956 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.6a9.559 9.559 0 01-4.91-1.355l-.351-.21-3.762.893.944-3.656-.228-.376A9.561 9.561 0 012.4 12c0-5.295 4.305-9.6 9.6-9.6s9.6 4.305 9.6 9.6-4.305 9.6-9.6 9.6z"/></svg>
+        Jetzt auf WhatsApp schreiben
+      </a>
+
+      <div class="kontakt-oder">oder</div>
+
+      <div class="kontakt-details">
+        <div class="kd-item">
+          <span class="kd-icon">📞</span>
+          <div><strong>Telefon</strong><a href="tel:+41522601010">052 260 10 10</a></div>
+        </div>
+        <div class="kd-item">
+          <span class="kd-icon">✉️</span>
+          <div><strong>E-Mail</strong><a href="mailto:oguzhan@fahrschule-oguzhan.ch">oguzhan@fahrschule-oguzhan.ch</a></div>
+        </div>
+        <div class="kd-item">
+          <span class="kd-icon">📍</span>
+          <div><strong>Adresse</strong><span>Bahnhofstrasse 45, 8500 Frauenfeld</span></div>
+        </div>
+        <div class="kd-item">
+          <span class="kd-icon">🕐</span>
+          <div><strong>Erreichbar</strong><span>Mo–Fr 08–19 Uhr, Sa 08–16 Uhr</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="kontakt-right">
+      <form id="contactForm" class="kontakt-form">
+        <h3>Oder schreib mir hier</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">Vorname *</label>
+            <input type="text" id="fname" name="fname" placeholder="Max" required />
+          </div>
+          <div class="form-group">
+            <label for="lname">Nachname *</label>
+            <input type="text" id="lname" name="lname" placeholder="Muster" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">E-Mail *</label>
+          <input type="email" id="email" name="email" placeholder="max@example.ch" required />
+        </div>
+        <div class="form-group">
+          <label for="interesse">Ich suche …</label>
+          <select id="interesse" name="interesse">
+            <option value="">Bitte wählen</option>
+            <option>Fahrausweis Kat. B (Auto)</option>
+            <option>Fahrausweis Kat. A (Motorrad)</option>
+            <option>Nothelferkurs</option>
+            <option>VKU</option>
+            <option>WAB</option>
+            <option>Theorieunterricht</option>
+            <option>Erstgespräch / Beratung</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="msg">Nachricht</label>
+          <textarea id="msg" name="msg" rows="3" placeholder="Hast du Fragen oder besondere Wünsche?"></textarea>
+        </div>
+        <button type="submit" class="btn btn-orange btn-full">Absenden</button>
+      </form>
+      <div id="formSuccess" class="form-success" style="display:none">
+        <div class="fs-icon">✅</div>
+        <h3>Danke!</h3>
+        <p>Ich melde mich bald bei dir — versprochen.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="logo-mark sm">O</span>
+      <div>
+        <strong>Fahrschule Oguzhan</strong>
+        <span>Bahnhofstrasse 45 · 8500 Frauenfeld</span>
+      </div>
+    </div>
+    <nav class="footer-nav">
+      <a href="#about">Über mich</a>
+      <a href="#angebot">Angebot</a>
+      <a href="#preise">Preise</a>
+      <a href="#ablauf">Ablauf</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <div class="footer-bottom-text">
+      <p>© 2025 Fahrschule Oguzhan · Frauenfeld · <a href="#">Impressum</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

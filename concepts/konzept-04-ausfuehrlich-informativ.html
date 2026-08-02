@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Konzept 04 – Ausführlich & Informativ | Fahrschule Oguzhan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Georgia&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  :root { --ink: #262523; --muted: #5B564D; --accent: #A85D2F; --bg-2: #FAF8F4; --border: #E3DDD0; }
+  body { font-family: 'Source Sans 3', system-ui, sans-serif; color: var(--ink); background: #fff; line-height: 1.75; font-size: 16px; }
+  .layout { display: grid; grid-template-columns: 240px 1fr; max-width: 1100px; margin: 0 auto; }
+  a { color: var(--accent); }
+  h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; color: var(--ink); }
+  .container { padding: 0 32px; }
+
+  .top { display: flex; align-items: center; justify-content: space-between; padding: 16px 32px; border-bottom: 1px solid var(--border); max-width: 1100px; margin: 0 auto; }
+  .brand { font-family: Georgia, serif; font-weight: bold; font-size: 1.15rem; }
+  .top a.wa { background: var(--accent); color: #fff; padding: 8px 16px; border-radius: 4px; font-size: .85rem; }
+
+  aside.toc { border-right: 1px solid var(--border); padding: 32px 20px; position: sticky; top: 0; align-self: start; height: 100vh; overflow-y: auto; }
+  aside.toc h4 { font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin-bottom: 14px; }
+  aside.toc ul { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+  aside.toc a { display: block; padding: 7px 10px; font-size: .88rem; color: var(--ink); border-radius: 4px; }
+  aside.toc a:hover { background: var(--bg-2); }
+
+  main { padding: 32px 40px 80px; }
+
+  .intro { margin-bottom: 40px; }
+  .intro h1 { font-size: 2.1rem; margin-bottom: 14px; }
+  .intro .lead { font-size: 1.1rem; color: var(--muted); }
+
+  section.chapter { padding: 30px 0; border-top: 1px solid var(--border); }
+  section.chapter h2 { font-size: 1.5rem; margin-bottom: 16px; }
+  section.chapter h3 { font-size: 1.1rem; margin: 20px 0 8px; }
+  section.chapter p { margin-bottom: 14px; color: #333; }
+  section.chapter ul, section.chapter ol { margin: 0 0 14px 24px; color: #333; }
+  section.chapter li { margin-bottom: 6px; }
+
+  .info-box { background: var(--bg-2); border-left: 3px solid var(--accent); padding: 16px 20px; margin: 18px 0; font-size: .95rem; }
+  .info-box strong { display: block; margin-bottom: 4px; color: var(--accent); }
+
+  .price-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: .92rem; }
+  .price-table th { text-align: left; border-bottom: 2px solid var(--ink); padding: 8px 4px; }
+  .price-table td { padding: 9px 4px; border-bottom: 1px solid var(--border); }
+  .price-table td.p { text-align: right; font-weight: 600; }
+
+  details.faq { border-bottom: 1px solid var(--border); padding: 14px 0; }
+  details.faq summary { cursor: pointer; font-weight: 600; font-size: 1rem; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  details.faq summary::-webkit-details-marker { display: none; }
+  details.faq summary::after { content: '+'; font-size: 1.3rem; color: var(--accent); }
+  details.faq[open] summary::after { content: '–'; }
+  details.faq p { margin-top: 10px; color: var(--muted); font-size: .93rem; }
+
+  .closing-cta { background: var(--bg-2); border: 1px solid var(--border); border-radius: 8px; padding: 32px; text-align: center; margin-top: 40px; }
+  .closing-cta h2 { border: none; margin-bottom: 10px; }
+  .btn { display: inline-block; background: var(--accent); color: #fff; padding: 13px 28px; border-radius: 4px; font-weight: 600; text-decoration: none; margin-top: 14px; }
+
+  footer { border-top: 1px solid var(--border); padding: 24px 32px; max-width: 1100px; margin: 0 auto; font-size: .85rem; color: var(--muted); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+
+  @media (max-width: 880px) {
+    .layout { grid-template-columns: 1fr; }
+    aside.toc { display: none; }
+    main { padding: 24px 20px 60px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="brand">Fahrschule Oguzhan</div>
+  <a href="https://wa.me/41522601010" class="wa" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+
+<div class="layout">
+  <aside class="toc">
+    <h4>Inhalt</h4>
+    <ul>
+      <li><a href="#einleitung">Einleitung</a></li>
+      <li><a href="#voraussetzungen">Voraussetzungen</a></li>
+      <li><a href="#ablauf">Der Ablauf im Detail</a></li>
+      <li><a href="#angebot">Unser Angebot</a></li>
+      <li><a href="#preise">Preise &amp; Kosten</a></li>
+      <li><a href="#faq">Häufige Fragen</a></li>
+      <li><a href="#ueber">Über Oguzhan</a></li>
+    </ul>
+  </aside>
+
+  <main>
+    <div class="intro" id="einleitung">
+      <h1>Der Führerschein in der Schweiz — ein vollständiger Leitfaden</h1>
+      <p class="lead">Diese Seite erklärt dir Schritt für Schritt, was auf dem Weg zum Fahrausweis in der Schweiz auf dich zukommt, was es kostet, und wie die Fahrschule Oguzhan in Frauenfeld dich dabei begleitet — von der Anmeldung bis zur bestandenen Prüfung.</p>
+    </div>
+
+    <section class="chapter" id="voraussetzungen">
+      <h2>1. Voraussetzungen für den Fahrausweis Kategorie B</h2>
+      <p>Bevor du mit der praktischen Ausbildung beginnen kannst, müssen in der Schweiz einige formale Voraussetzungen erfüllt sein. Diese sind gesetzlich vorgeschrieben und gelten unabhängig davon, bei welcher Fahrschule du dich anmeldest.</p>
+      <ul>
+        <li><strong>Mindestalter:</strong> 17 Jahre für den Lernfahrausweis (begleitetes Fahren), 18 Jahre für die praktische Prüfung ohne Begleitung.</li>
+        <li><strong>Sehtest:</strong> muss bei einer anerkannten Stelle (z. B. Optiker) absolviert und beim Strassenverkehrsamt eingereicht werden.</li>
+        <li><strong>Nothelferkurs:</strong> ein Tageskurs, der vor der Beantragung des Lernfahrausweises absolviert sein muss.</li>
+        <li><strong>Theorieprüfung:</strong> muss bestanden sein, bevor der Lernfahrausweis ausgestellt wird.</li>
+      </ul>
+      <div class="info-box">
+        <strong>Gut zu wissen</strong>
+        Den Nothelferkurs und die Theorievorbereitung kannst du direkt bei uns absolvieren — wir übernehmen auf Wunsch auch die administrative Anmeldung beim Strassenverkehrsamt Thurgau.
+      </div>
+    </section>
+
+    <section class="chapter" id="ablauf">
+      <h2>2. Der Ablauf im Detail</h2>
+      <h3>2.1 Erstgespräch und Anmeldung</h3>
+      <p>Alles beginnt mit einem unverbindlichen Gespräch — per WhatsApp, Telefon oder E-Mail. Wir besprechen deinen Kenntnisstand, deine zeitliche Verfügbarkeit und welche Kategorie du anstrebst. Daraus entsteht ein grober Zeitplan, an dem du dich orientieren kannst.</p>
+      <h3>2.2 Nothelferkurs und Lernfahrausweis</h3>
+      <p>Nach dem Nothelferkurs beantragst du beim Strassenverkehrsamt Thurgau deinen Lernfahrausweis. Dafür brauchst du den Sehtestnachweis, ein Passfoto und die Bestätigung des Nothelferkurses. Wir helfen dir, die Unterlagen vollständig zusammenzustellen, damit nichts verzögert wird.</p>
+      <h3>2.3 Theorieprüfung</h3>
+      <p>Parallel oder im Anschluss bereitest du dich auf die Theorieprüfung vor. Unser Theoriepaket umfasst sechs Lektionen sowie Zugang zu einer digitalen Lernplattform mit Prüfungssimulationen, damit du am Prüfungstag sicher bist.</p>
+      <h3>2.4 Praktische Fahrstunden</h3>
+      <p>Sobald der Lernfahrausweis vorliegt, starten die praktischen Fahrstunden. Wir beginnen in ruhigen Verkehrssituationen und steigern die Komplexität schrittweise: Kreisverkehr, Autobahn, Nachtfahrt, Fahren bei Regen — alles wird abgedeckt, bevor du zur Prüfung antrittst.</p>
+      <h3>2.5 Verkehrskunde (VKU)</h3>
+      <p>Die Verkehrskunde ist gesetzlich vorgeschrieben und muss vor der praktischen Prüfung absolviert werden. Sie umfasst zwei Tage à vier Stunden und behandelt unter anderem Gefahrenlehre, Verkehrsregeln im Detail und partnerschaftliches Verhalten im Strassenverkehr.</p>
+      <h3>2.6 Die praktische Prüfung</h3>
+      <p>Erst wenn wir gemeinsam der Meinung sind, dass du bereit bist, melden wir dich zur praktischen Prüfung an. Diese Sorgfalt zahlt sich aus: 94 % unserer Fahrschülerinnen und Fahrschüler bestehen die Prüfung beim ersten Versuch — deutlich über dem kantonalen Durchschnitt.</p>
+    </section>
+
+    <section class="chapter" id="angebot">
+      <h2>3. Unser Angebot im Überblick</h2>
+      <p>Wir bieten sämtliche Ausbildungsschritte aus einer Hand an, damit du nicht zwischen verschiedenen Anbietern koordinieren musst.</p>
+      <ul>
+        <li><strong>Auto (Kategorie B):</strong> Fahrstunden manuell oder automatisch, Abend- und Wochenendtermine möglich.</li>
+        <li><strong>Motorrad (Kategorie A/A1):</strong> inklusive Schulungsmotorrad und obligatorischem Sicherheitstraining.</li>
+        <li><strong>Nothelferkurs:</strong> eintägig, in kleinen Gruppen von maximal 12 Personen.</li>
+        <li><strong>Verkehrskunde (VKU):</strong> zweitägig, interaktiv statt frontal unterrichtet.</li>
+        <li><strong>Theorieunterricht:</strong> sechs Lektionen inklusive Lernplattform und Prüfungssimulation.</li>
+        <li><strong>Weiterausbildungskurse (WAB):</strong> für die Zeit nach der Probezeit, WAB 1 (nasse Fahrbahn) und WAB 2 (ökonomisches Fahren).</li>
+      </ul>
+    </section>
+
+    <section class="chapter" id="preise">
+      <h2>4. Preise &amp; Kosten im Detail</h2>
+      <p>Transparenz ist uns wichtig. Nachfolgend findest du alle Preise im Detail, sowie eine Einschätzung der Gesamtkosten für den Führerschein.</p>
+      <table class="price-table">
+        <thead><tr><th>Leistung</th><th style="text-align:right">Preis</th></tr></thead>
+        <tbody>
+          <tr><td>Fahrstunde Kat. B — 45 Minuten</td><td class="p">CHF 98.–</td></tr>
+          <tr><td>Fahrstunde Kat. B — 60 Minuten</td><td class="p">CHF 130.–</td></tr>
+          <tr><td>10er-Paket à 45 Minuten</td><td class="p">CHF 920.–</td></tr>
+          <tr><td>Fahrstunde Kat. A — 45 Minuten</td><td class="p">CHF 108.–</td></tr>
+          <tr><td>Nothelferkurs</td><td class="p">CHF 175.–</td></tr>
+          <tr><td>Verkehrskunde VKU</td><td class="p">CHF 295.–</td></tr>
+          <tr><td>Theorieunterricht (6 Lektionen)</td><td class="p">CHF 240.–</td></tr>
+          <tr><td>WAB 1 oder WAB 2</td><td class="p">CHF 280.–</td></tr>
+          <tr><td>Prüfungsfahrt inkl. Amtsgebühr</td><td class="p">CHF 200.–</td></tr>
+        </tbody>
+      </table>
+      <div class="info-box">
+        <strong>Gesamtkosten Richtwert</strong>
+        Als grobe Orientierung solltest du für den kompletten Führerschein Kategorie B inklusive aller Kurse und Prüfungen mit CHF 2'500–4'000 rechnen. Der genaue Betrag hängt massgeblich davon ab, wie viele Fahrstunden du individuell benötigst.
+      </div>
+    </section>
+
+    <section class="chapter" id="faq">
+      <h2>5. Häufige Fragen</h2>
+      <details class="faq">
+        <summary>Wie viele Fahrstunden brauche ich in etwa?</summary>
+        <p>Das ist sehr individuell und hängt von Vorerfahrung, Lerntempo und Übungsfrequenz ab. Als grobe Richtschnur bewegen sich die meisten unserer Schülerinnen und Schüler zwischen 20 und 35 Lektionen.</p>
+      </details>
+      <details class="faq">
+        <summary>Kann ich den Unterricht auch auf Türkisch bekommen?</summary>
+        <p>Ja. Oguzhan unterrichtet auf Deutsch, Türkisch und Englisch, was insbesondere bei der Verkehrskunde und den theoretischen Erklärungen vielen Schülerinnen und Schülern hilft.</p>
+      </details>
+      <details class="faq">
+        <summary>Was passiert, wenn ich die Prüfung nicht bestehe?</summary>
+        <p>Das kommt vor und ist kein Weltuntergang. Wir besprechen gemeinsam, woran es lag, und bereiten dich gezielt auf den nächsten Versuch vor. Unsere Bestehensquote von 94 % zeigt aber, dass dies die Ausnahme ist.</p>
+      </details>
+      <details class="faq">
+        <summary>Bietet ihr auch Automatikstunden an?</summary>
+        <p>Ja, sowohl manuell als auch Automat sind möglich — sprich uns einfach bei der Anmeldung darauf an.</p>
+      </details>
+      <details class="faq">
+        <summary>Wie schnell bekomme ich einen Termin?</summary>
+        <p>Nach der Anmeldung melden wir uns in der Regel innerhalb von 24 Stunden mit einem Terminvorschlag.</p>
+      </details>
+    </section>
+
+    <section class="chapter" id="ueber">
+      <h2>6. Über Oguzhan</h2>
+      <p>Oguzhan ist eidgenössisch diplomierter Fahrlehrer, VKU-Instruktor, Nothelferkurs-Leiter und Mitglied des Verbands freierwerbender Fahrlehrer (VFK). Seit über 25 Jahren unterrichtet er Fahrschülerinnen und Fahrschüler in Frauenfeld und dem gesamten Kanton Thurgau — mit einem Unterrichtsstil, der geduldig, direkt und auf die individuelle Person zugeschnitten ist.</p>
+    </section>
+
+    <div class="closing-cta">
+      <h2>Bereit für den ersten Schritt?</h2>
+      <p>Schreib uns unverbindlich — wir besprechen gemeinsam, wie dein Weg zum Führerschein aussehen kann.</p>
+      <a href="https://wa.me/41522601010" class="btn" target="_blank" rel="noopener">Jetzt per WhatsApp anfragen</a>
+    </div>
+  </main>
+</div>
+
+<footer>
+  <span>© 2025 Fahrschule Oguzhan · Bahnhofstrasse 45, 8500 Frauenfeld</span>
+  <span>052 260 10 10 · oguzhan@fahrschule-oguzhan.ch</span>
+</footer>
+
+</body>
+</html>
