@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Favorit 11 – Schiefergrau | Fahrschule Oguzhan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  :root { --bg: #F2F3F5; --card: #FFFFFF; --accent: #4C5B6E; --accent-dark: #3C4958; --ink: #242A31; --muted: #76828D; --blob-shadow: rgba(76,91,110,.2); }
+  body { font-family: 'Nunito', system-ui, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.65; }
+  .container { max-width: 1020px; margin: 0 auto; padding: 0 24px; }
+  a { text-decoration: none; color: inherit; }
+  h1, h2, h3 { font-weight: 800; }
+
+  header { display: flex; align-items: center; justify-content: space-between; padding: 22px 24px; max-width: 1020px; margin: 0 auto; }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand .mark { width: 42px; height: 42px; background: var(--accent); border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 14px var(--blob-shadow); flex-shrink: 0; }
+  .brand-text { display: flex; flex-direction: column; line-height: 1.18; }
+  .brand-name { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.18rem; color: var(--ink); letter-spacing: -.01em; }
+  .brand-sub { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: .62rem; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin-top: 1px; }
+  .wa-pill { background: #25D366; color: #fff; padding: 10px 18px; border-radius: 100px; font-weight: 700; font-size: .88rem; }
+
+  .hero { padding: 30px 0 70px; }
+  .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+  .hero h1 { font-size: 2.6rem; line-height: 1.2; margin-bottom: 16px; }
+  .hero h1 em { color: var(--accent); font-style: normal; }
+  .hero p { color: var(--muted); font-size: 1.05rem; margin-bottom: 24px; max-width: 440px; }
+  .blob { position: relative; }
+  .blob img { width: 100%; height: 420px; object-fit: cover; border-radius: 40% 60% 55% 45% / 55% 45% 55% 45%; box-shadow: 0 24px 50px var(--blob-shadow); }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 15px 28px; border-radius: 100px; font-weight: 800; font-size: .95rem; }
+  .btn-terra { background: var(--accent); color: #fff; }
+
+  .story { background: var(--card); border-radius: 32px; margin: 0 auto 70px; max-width: 1020px; padding: 48px; display: grid; grid-template-columns: 260px 1fr; gap: 40px; align-items: center; }
+  .story img { width: 100%; border-radius: 24px; height: 280px; object-fit: cover; }
+  .story h2 { font-size: 1.6rem; margin-bottom: 12px; }
+  .story p { color: var(--muted); margin-bottom: 10px; }
+  .story .sig { color: var(--accent); font-weight: 700; margin-top: 12px; }
+
+  .section { padding: 20px 0 70px; }
+  .section-head { text-align: center; max-width: 520px; margin: 0 auto 40px; }
+  .section-head span { color: var(--accent); font-weight: 800; font-size: .85rem; text-transform: uppercase; letter-spacing: .04em; }
+  .section-head h2 { font-size: 1.9rem; margin: 8px 0; }
+  .section-head p { color: var(--muted); }
+
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .card { background: var(--card); border-radius: 24px; padding: 26px; text-align: center; }
+  .card .emoji { font-size: 2.2rem; margin-bottom: 12px; }
+  .card h3 { font-size: 1.05rem; margin-bottom: 8px; }
+  .card p { color: var(--muted); font-size: .9rem; }
+  .card .price { display: block; margin-top: 12px; color: var(--accent); font-weight: 800; }
+
+  .chat-bubbles { display: flex; flex-direction: column; gap: 14px; max-width: 640px; margin: 0 auto; }
+  .bubble { background: var(--card); border-radius: 20px; padding: 18px 22px; position: relative; }
+  .bubble .stars { color: #F5A623; margin-bottom: 6px; font-size: .9rem; }
+  .bubble p { font-size: .92rem; }
+  .bubble strong { display: block; margin-top: 8px; color: var(--accent); font-size: .85rem; }
+
+  .cta-band { background: var(--accent); color: #fff; text-align: center; padding: 56px 24px; border-radius: 32px; max-width: 1020px; margin: 0 auto 60px; }
+  .cta-band h2 { font-size: 1.8rem; margin-bottom: 10px; }
+  .cta-band p { margin-bottom: 22px; opacity: .9; }
+  .cta-band .btn { background: #fff; color: var(--accent); }
+
+  footer { text-align: center; padding: 30px 24px; color: var(--muted); font-size: .85rem; }
+
+  @media (max-width: 880px) {
+    .hero-grid, .story { grid-template-columns: 1fr; }
+    .cards { grid-template-columns: repeat(2, 1fr); }
+    .story { padding: 28px; border-radius: 24px; }
+  }
+  @media (max-width: 620px) {
+    .cards { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="#" class="brand">
+    <span class="mark"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="2" fill="#fff" stroke="none"/><path d="M12 10V4M10.3 13L5 16.3M13.7 13L19 16.3"/></svg></span>
+    <span class="brand-text"><span class="brand-name">Oguzhan</span><span class="brand-sub">Fahrschule · Frauenfeld</span></span>
+  </a>
+  <a href="https://wa.me/41522601010" class="wa-pill" target="_blank" rel="noopener">💬 WhatsApp</a>
+</header>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <h1>Fahren lernen soll sich <em>gut</em> anfühlen.</h1>
+      <p>Hoi, ich bin Oguzhan. Bei mir gibt's keine dummen Fragen, keinen Druck — nur Zeit für dich und dein Tempo. Lass uns loslegen.</p>
+      <a href="https://wa.me/41522601010" class="btn btn-terra" target="_blank" rel="noopener">👋 Sag Hallo auf WhatsApp</a>
+    </div>
+    <div class="blob"><img src="../images/hero.jpg" alt="Fahrstunde mit Oguzhan" /></div>
+  </div>
+</section>
+
+<div class="story">
+  <img src="../images/oguzhan.jpg" alt="Oguzhan" />
+  <div>
+    <h2>„Jede Frage bringt dich weiter."</h2>
+    <p>Seit 25 Jahren bringe ich Menschen in Frauenfeld das Fahren bei — und ich liebe es immer noch genauso wie am ersten Tag. Ich erkläre so lange, bis es wirklich sitzt, auf Deutsch, Türkisch oder Englisch.</p>
+    <p>Fehler sind bei mir völlig normal. Sie gehören zum Lernen dazu, genau wie ein gutes Gespräch zwischendurch.</p>
+    <span class="sig">— Oguzhan, dein Fahrlehrer</span>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span>Mein Angebot</span>
+      <h2>Womit ich dir helfen kann</h2>
+      <p>Alles rund um deinen Fahrausweis, aus einer Hand.</p>
+    </div>
+    <div class="cards">
+      <div class="card"><div class="emoji">🚗</div><h3>Auto Kat. B</h3><p>Manuell oder Automat, in deinem Tempo.</p><span class="price">ab CHF 98.–</span></div>
+      <div class="card"><div class="emoji">🏍️</div><h3>Motorrad Kat. A</h3><p>Freiheit auf zwei Rädern, sicher gelernt.</p><span class="price">ab CHF 108.–</span></div>
+      <div class="card"><div class="emoji">❤️</div><h3>Nothelferkurs</h3><p>Locker, praxisnah, in kleiner Gruppe.</p><span class="price">CHF 175.–</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span>Herzenssache</span>
+      <h2>Was meine Schüler sagen</h2>
+    </div>
+    <div class="chat-bubbles">
+      <div class="bubble"><div class="stars">★★★★★</div><p>„Oguzhan ist megageduldig und erklärt alles super verständlich. Beim ersten Versuch bestanden — mega!"</p><strong>Laura M.</strong></div>
+      <div class="bubble"><div class="stars">★★★★★</div><p>„Den VKU auf Türkisch zu machen war ein Gamechanger für mich."</p><strong>Yusuf A.</strong></div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <h2>Bereit loszulegen?</h2>
+  <p>Schreib mir, ich freue mich auf dich.</p>
+  <a href="https://wa.me/41522601010" class="btn" target="_blank" rel="noopener">Jetzt schreiben</a>
+</div>
+
+<footer>© 2025 Fahrschule Oguzhan · Bahnhofstrasse 45, 8500 Frauenfeld · 052 260 10 10</footer>
+
+</body>
+</html>

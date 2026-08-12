@@ -12,24 +12,44 @@
   .wrap { max-width: 1080px; margin: 0 auto; }
   .notice { background: rgba(245,158,11,.1); border: 1px solid rgba(245,158,11,.35); border-radius: 10px; padding: 16px 20px; font-size: .88rem; color: #fcd9a0; margin-bottom: 40px; }
   .notice strong { color: #F59E0B; }
-  header { margin-bottom: 44px; }
+  header { margin-bottom: 36px; }
   header .eyebrow { color: #F59E0B; font-weight: 700; font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; }
   header h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 800; margin: 8px 0 12px; }
-  header p { color: rgba(255,255,255,.6); max-width: 620px; }
+  header p { color: rgba(255,255,255,.6); max-width: 660px; }
+  header p b { color: #fff; }
 
   .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
-  .card {
-    background: #161616; border: 1px solid rgba(255,255,255,.1); border-radius: 14px;
+
+  .fav-card {
+    background: #161616; border: 1px solid rgba(255,255,255,.12); border-radius: 14px;
     padding: 24px; display: flex; flex-direction: column; gap: 10px;
     text-decoration: none; color: inherit; transition: transform .18s ease, border-color .18s ease;
+    position: relative;
   }
-  .card:hover { transform: translateY(-3px); border-color: #F59E0B; }
-  .card .num { font-size: .75rem; font-weight: 800; color: #F59E0B; letter-spacing: .06em; }
-  .card h2 { font-size: 1.15rem; font-weight: 700; }
-  .card p { font-size: .87rem; color: rgba(255,255,255,.55); flex: 1; }
-  .card .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
-  .card .tag { font-size: .7rem; background: rgba(255,255,255,.08); padding: 3px 9px; border-radius: 100px; color: rgba(255,255,255,.6); }
-  .card .open { font-size: .82rem; font-weight: 700; color: #F59E0B; margin-top: 4px; }
+  .fav-card:hover { transform: translateY(-3px); }
+  .fav-card .swatch-row { display: flex; align-items: center; gap: 10px; }
+  .fav-card .swatch { width: 22px; height: 22px; border-radius: 50%; border: 2px solid rgba(255,255,255,.25); flex-shrink: 0; }
+  .fav-card .num { font-size: .75rem; font-weight: 800; letter-spacing: .06em; color: rgba(255,255,255,.5); }
+  .fav-card .star { position: absolute; top: 16px; right: 16px; font-size: .78rem; background: rgba(245,158,11,.15); color: #F59E0B; padding: 3px 9px; border-radius: 100px; font-weight: 700; }
+  .fav-card h2 { font-size: 1.1rem; font-weight: 700; }
+  .fav-card p { font-size: .86rem; color: rgba(255,255,255,.55); flex: 1; }
+  .fav-card .open { font-size: .82rem; font-weight: 700; margin-top: 4px; }
+
+  .divider-section { margin: 64px 0 32px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,.1); }
+  .divider-section .eyebrow { color: rgba(255,255,255,.4); font-weight: 700; font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; }
+  .divider-section h2 { font-size: 1.3rem; font-weight: 700; margin: 6px 0 10px; color: rgba(255,255,255,.75); }
+  .divider-section p { color: rgba(255,255,255,.4); font-size: .85rem; max-width: 620px; margin-bottom: 28px; }
+
+  .archive-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; opacity: .68; }
+  .archive-card {
+    background: #131313; border: 1px solid rgba(255,255,255,.06); border-radius: 10px;
+    padding: 16px 18px; display: flex; flex-direction: column; gap: 6px;
+    text-decoration: none; color: inherit; transition: opacity .18s ease;
+  }
+  .archive-card:hover { opacity: 1; }
+  .archive-card .num { font-size: .68rem; font-weight: 700; color: rgba(255,255,255,.4); }
+  .archive-card h3 { font-size: .92rem; font-weight: 600; color: rgba(255,255,255,.8); }
+  .archive-card span.open { font-size: .74rem; color: rgba(255,255,255,.4); margin-top: 2px; }
 
   footer { text-align: center; margin-top: 60px; color: rgba(255,255,255,.35); font-size: .8rem; }
 </style>
@@ -41,109 +61,119 @@
   </div>
 
   <header>
-    <span class="eyebrow">Fahrschule Oguzhan · Design-Konzepte</span>
-    <h1><span id="conceptCount">10</span> Konzepte zur Auswahl</h1>
-    <p>Von extrem minimal bis ausführlich informativ — jede Karte öffnet ein eigenständiges Konzept mit echten Inhalten der Fahrschule Oguzhan.</p>
+    <span class="eyebrow">Fahrschule Oguzhan · Favoriten-Auswahl</span>
+    <h1><span id="favCount">13</span> Farbvarianten des Favoriten</h1>
+    <p>Der Klient mochte <b>„Warm & Persönlich"</b> am meisten. Hier sind 13 Farbvarianten davon — gleicher Aufbau, jeweils andere Farbpalette. <b>Favorit 12</b> nutzt bewusst dieselbe Palette wie Konzept 12 (Dunkel/Rot).</p>
   </header>
 
-  <div class="grid" id="conceptGrid">
-    <a class="card" href="../index.production.html" style="border-color:rgba(245,158,11,.5)">
-      <span class="num">00</span>
-      <h2>Original (Aktuell Live)</h2>
-      <p>Das bisherige Design (Dark-Theme, Orange-Akzent, v3) — der aktuelle Stand vor der Konzeptphase, zum direkten Vergleich.</p>
-      <div class="tags"><span class="tag">original</span><span class="tag">live</span></div>
-      <span class="open">Öffnen →</span>
+  <div class="grid">
+    <a class="fav-card" href="favorit-01-terracotta.html" style="border-color:#E0703F">
+      <span class="star">⭐ Original-Ton</span>
+      <div class="swatch-row"><span class="swatch" style="background:#E0703F"></span><span class="num">01</span></div>
+      <h2>Terracotta</h2>
+      <p>Die ursprüngliche Farbe des Favoriten — warmes Orange-Terracotta.</p>
+      <span class="open" style="color:#E0703F">Öffnen →</span>
     </a>
-    <a class="card" href="konzept-01-minimal-zero.html">
-      <span class="num">01</span>
-      <h2>Minimal Zero</h2>
-      <p>Ein einziger Screen, kaum Text, ein CTA. Radikal reduziert.</p>
-      <div class="tags"><span class="tag">simpel</span><span class="tag">hell</span></div>
-      <span class="open">Öffnen →</span>
+    <a class="fav-card" href="favorit-02-ozeanblau.html" style="border-color:#2E6FA7">
+      <div class="swatch-row"><span class="swatch" style="background:#2E6FA7"></span><span class="num">02</span></div>
+      <h2>Ozeanblau</h2>
+      <p>Ruhiges, vertrauensvolles Blau statt Warmton.</p>
+      <span class="open" style="color:#2E6FA7">Öffnen →</span>
     </a>
-    <a class="card" href="konzept-02-klassisch.html">
-      <span class="num">02</span>
-      <h2>Klassisch &amp; Vertrauenswürdig</h2>
-      <p>Helles Corporate-Layout, Navy/Blau, gewohnte Fahrschul-Struktur.</p>
-      <div class="tags"><span class="tag">seriös</span><span class="tag">hell</span></div>
-      <span class="open">Öffnen →</span>
+    <a class="fav-card" href="favorit-03-tannengruen.html" style="border-color:#2F6B45">
+      <div class="swatch-row"><span class="swatch" style="background:#2F6B45"></span><span class="num">03</span></div>
+      <h2>Tannengrün</h2>
+      <p>Satte, seriöse Grüntöne — sicher &amp; vertrauensvoll.</p>
+      <span class="open" style="color:#2F6B45">Öffnen →</span>
     </a>
-    <a class="card" href="konzept-03-warm-persoenlich.html">
-      <span class="num">03</span>
-      <h2>Warm &amp; Persönlich</h2>
-      <p>Cremefarben, runde Formen, familiäres Storytelling.</p>
-      <div class="tags"><span class="tag">warm</span><span class="tag">persönlich</span></div>
-      <span class="open">Öffnen →</span>
+    <a class="fav-card" href="favorit-04-bernstein.html" style="border-color:#A66C10">
+      <div class="swatch-row"><span class="swatch" style="background:#A66C10"></span><span class="num">04</span></div>
+      <h2>Bernstein</h2>
+      <p>Warmes, sattes Gold-Ocker.</p>
+      <span class="open" style="color:#A66C10">Öffnen →</span>
     </a>
-    <a class="card" href="konzept-04-ausfuehrlich-informativ.html">
-      <span class="num">04</span>
-      <h2>Ausführlich &amp; Informativ</h2>
-      <p>Textlastiger Leitfaden mit FAQ und Detailwissen zum CH-Führerschein.</p>
-      <div class="tags"><span class="tag">textlastig</span><span class="tag">informativ</span></div>
-      <span class="open">Öffnen →</span>
+    <a class="fav-card" href="favorit-05-signalrot.html" style="border-color:#C13B2E">
+      <div class="swatch-row"><span class="swatch" style="background:#C13B2E"></span><span class="num">05</span></div>
+      <h2>Signalrot</h2>
+      <p>Klares Stopp-/Warnrot, wie im Strassenverkehr.</p>
+      <span class="open" style="color:#C13B2E">Öffnen →</span>
     </a>
-    <a class="card" href="konzept-05-bold-statement.html">
-      <span class="num">05</span>
-      <h2>Bold Statement</h2>
-      <p>Dunkel, laut, riesige Typografie, Marquee-Banner.</p>
-      <div class="tags"><span class="tag">dunkel</span><span class="tag">laut</span></div>
-      <span class="open">Öffnen →</span>
+    <a class="fav-card" href="favorit-06-ampelgruen.html" style="border-color:#2E8B3D">
+      <div class="swatch-row"><span class="swatch" style="background:#2E8B3D"></span><span class="num">06</span></div>
+      <h2>Ampelgrün</h2>
+      <p>Frisches „Freie Fahrt"-Grün.</p>
+      <span class="open" style="color:#2E8B3D">Öffnen →</span>
     </a>
-    <a class="card" href="konzept-06-preise-zuerst.html">
-      <span class="num">06</span>
-      <h2>Preise zuerst</h2>
-      <p>Preis-Karten direkt above the fold, klare Pakete.</p>
-      <div class="tags"><span class="tag">preisorientiert</span><span class="tag">hell</span></div>
-      <span class="open">Öffnen →</span>
+    <a class="fav-card" href="favorit-07-petrolblau.html" style="border-color:#17707A">
+      <div class="swatch-row"><span class="swatch" style="background:#17707A"></span><span class="num">07</span></div>
+      <h2>Petrolblau</h2>
+      <p>Tiefes, modernes Blaugrün.</p>
+      <span class="open" style="color:#17707A">Öffnen →</span>
     </a>
-    <a class="card" href="konzept-07-editorial-magazin.html">
-      <span class="num">07</span>
-      <h2>Editorial Magazin</h2>
-      <p>Grosse Fotografie, Serif-Typografie, Reportage-Stil.</p>
-      <div class="tags"><span class="tag">elegant</span><span class="tag">textlastig</span></div>
-      <span class="open">Öffnen →</span>
+    <a class="fav-card" href="favorit-08-sicherheitsorange.html" style="border-color:#D4551F">
+      <div class="swatch-row"><span class="swatch" style="background:#D4551F"></span><span class="num">08</span></div>
+      <h2>Sicherheitsorange</h2>
+      <p>Kräftiges Warnorange, wie Sicherheitswesten.</p>
+      <span class="open" style="color:#D4551F">Öffnen →</span>
     </a>
-    <a class="card" href="konzept-08-amtlich-sachlich.html">
-      <span class="num">08</span>
-      <h2>Amtlich &amp; Sachlich</h2>
-      <p>Sie-Form, nüchtern, tabellarisch — bewusst behördlicher Kontrast.</p>
-      <div class="tags"><span class="tag">formell</span><span class="tag">textlastig</span></div>
-      <span class="open">Öffnen →</span>
+    <a class="fav-card" href="favorit-09-navygold.html" style="border-color:#1F3A5F">
+      <div class="swatch-row"><span class="swatch" style="background:#1F3A5F"></span><span class="num">09</span></div>
+      <h2>Navy & Gold</h2>
+      <p>Dunkles, seriöses Marineblau.</p>
+      <span class="open" style="color:#1F3A5F">Öffnen →</span>
     </a>
-    <a class="card" href="konzept-09-whatsapp-funnel.html">
-      <span class="num">09</span>
-      <h2>WhatsApp Funnel</h2>
-      <p>Ein Screen, ein Button. Mobile-first Funnel ohne Umwege.</p>
-      <div class="tags"><span class="tag">simpel</span><span class="tag">mobile</span></div>
-      <span class="open">Öffnen →</span>
+    <a class="fav-card" href="favorit-10-anthrazit.html" style="border-color:#3B434B">
+      <div class="swatch-row"><span class="swatch" style="background:#3B434B"></span><span class="num">10</span></div>
+      <h2>Anthrazit</h2>
+      <p>Modernes, automotives Graphit.</p>
+      <span class="open" style="color:#3B434B">Öffnen →</span>
     </a>
-    <a class="card" href="konzept-10-social-proof.html">
-      <span class="num">10</span>
-      <h2>Social Proof zuerst</h2>
-      <p>Bewertungen und Sterne im Zentrum, Vertrauen durch Zahlen.</p>
-      <div class="tags"><span class="tag">hell</span><span class="tag">vertrauen</span></div>
-      <span class="open">Öffnen →</span>
+    <a class="fav-card" href="favorit-11-schiefergrau.html" style="border-color:#4C5B6E">
+      <div class="swatch-row"><span class="swatch" style="background:#4C5B6E"></span><span class="num">11</span></div>
+      <h2>Schiefergrau</h2>
+      <p>Minimalistisches, kühles Blaugrau.</p>
+      <span class="open" style="color:#4C5B6E">Öffnen →</span>
     </a>
-    <a class="card" href="konzept-11-bojan-style.html" style="border-color:rgba(226,35,26,.4)">
-      <span class="num">11</span>
-      <h2>Bojan-Style (Video-Hero)</h2>
-      <p>Angelehnt an bojan-fahrschule.ch — Vollbild-Video zu Beginn, rot/dunkel, sportlich.</p>
-      <div class="tags"><span class="tag">video</span><span class="tag">referenz</span></div>
-      <span class="open">Öffnen →</span>
+    <a class="fav-card" href="favorit-12-dunkelrot.html" style="border-color:#D9695C">
+      <span class="star">⭐ Wie Konzept 12</span>
+      <div class="swatch-row"><span class="swatch" style="background:#D9695C"></span><span class="num">12</span></div>
+      <h2>Dunkel/Rot</h2>
+      <p>Identische Palette wie Konzept 12 — schwarzer Grund, Rot als Akzent.</p>
+      <span class="open" style="color:#D9695C">Öffnen →</span>
     </a>
-    <a class="card" href="konzept-12-bojan-pastell.html" style="border-color:rgba(217,105,92,.5)">
-      <span class="num">12</span>
-      <h2>Bojan-Style Dunkel/Rot</h2>
-      <p>Gleiches Video-Hero-Pattern, aber modern und dunkel: schwarzer Grundton, gerundete Karten, Rot als Akzent statt Fläche.</p>
-      <div class="tags"><span class="tag">video</span><span class="tag">dunkel</span><span class="tag">modern</span></div>
-      <span class="open">Öffnen →</span>
+    <a class="fav-card" href="favorit-13-bordeaux.html" style="border-color:#7A2E3D">
+      <div class="swatch-row"><span class="swatch" style="background:#7A2E3D"></span><span class="num">13</span></div>
+      <h2>Bordeaux</h2>
+      <p>Tiefes, elegantes Weinrot.</p>
+      <span class="open" style="color:#7A2E3D">Öffnen →</span>
     </a>
+  </div>
+
+  <div class="divider-section">
+    <span class="eyebrow">Archiv</span>
+    <h2>Weitere Konzepte (nicht Favoriten)</h2>
+    <p>Die ursprünglichen 13 Konzepte aus der ersten Runde. Der Klient hat sich für „Warm & Persönlich" entschieden — diese hier dienen nur noch als Referenz.</p>
+    <div class="archive-grid">
+      <a class="archive-card" href="../index.production.html"><span class="num">00</span><h3>Original (Aktuell Live)</h3><span class="open">Öffnen →</span></a>
+      <a class="archive-card" href="konzept-01-minimal-zero.html"><span class="num">01</span><h3>Minimal Zero</h3><span class="open">Öffnen →</span></a>
+      <a class="archive-card" href="konzept-02-klassisch.html"><span class="num">02</span><h3>Klassisch & Vertrauenswürdig</h3><span class="open">Öffnen →</span></a>
+      <a class="archive-card" href="konzept-03-warm-persoenlich.html"><span class="num">03</span><h3>Warm & Persönlich (Original)</h3><span class="open">Öffnen →</span></a>
+      <a class="archive-card" href="konzept-04-ausfuehrlich-informativ.html"><span class="num">04</span><h3>Ausführlich & Informativ</h3><span class="open">Öffnen →</span></a>
+      <a class="archive-card" href="konzept-05-bold-statement.html"><span class="num">05</span><h3>Bold Statement</h3><span class="open">Öffnen →</span></a>
+      <a class="archive-card" href="konzept-06-preise-zuerst.html"><span class="num">06</span><h3>Preise zuerst</h3><span class="open">Öffnen →</span></a>
+      <a class="archive-card" href="konzept-07-editorial-magazin.html"><span class="num">07</span><h3>Editorial Magazin</h3><span class="open">Öffnen →</span></a>
+      <a class="archive-card" href="konzept-08-amtlich-sachlich.html"><span class="num">08</span><h3>Amtlich & Sachlich</h3><span class="open">Öffnen →</span></a>
+      <a class="archive-card" href="konzept-09-whatsapp-funnel.html"><span class="num">09</span><h3>WhatsApp Funnel</h3><span class="open">Öffnen →</span></a>
+      <a class="archive-card" href="konzept-10-social-proof.html"><span class="num">10</span><h3>Social Proof zuerst</h3><span class="open">Öffnen →</span></a>
+      <a class="archive-card" href="konzept-11-bojan-style.html"><span class="num">11</span><h3>Bojan-Style (Video-Hero)</h3><span class="open">Öffnen →</span></a>
+      <a class="archive-card" href="konzept-12-bojan-pastell.html"><span class="num">12</span><h3>Bojan-Style Dunkel/Rot</h3><span class="open">Öffnen →</span></a>
+    </div>
   </div>
 
   <footer>Fahrschule Oguzhan · Konzeptphase · nicht für Produktion</footer>
 </div>
 <script>
-  document.getElementById('conceptCount').textContent = document.getElementById('conceptGrid').children.length;
+  document.getElementById('favCount').textContent = document.querySelector('.grid').children.length;
 </script>
 </body>
 </html>

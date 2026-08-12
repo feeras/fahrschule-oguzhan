@@ -1,67 +1,87 @@
 # Konzeptphase – NICHT für Deployment
 
-Dieser Ordner enthält **11 neue Design-Konzepte plus das ursprüngliche Live-Design**
-(Kategorie 00) für die Fahrschule-Oguzhan-Website, die dem Klienten zur Auswahl
-vorgelegt werden. Es handelt sich um eine reine **lokale Vorschau- und
-Entscheidungsphase**.
+Der Klient hat aus der ersten Runde **Konzept 03 „Warm & Persönlich"** als
+Favoriten gewählt. Dieser Ordner enthält jetzt **13 Farbvarianten dieses
+Favoriten** (gleicher Aufbau, jeweils andere Palette) sowie **13 archivierte
+Konzepte** aus der ersten Runde, die nicht mehr im Fokus stehen. Es handelt
+sich weiterhin um eine reine **lokale Vorschau- und Entscheidungsphase**.
 
 ## Wichtig
 
 - **Nichts hier wird auf Netlify/Fly deployed.** Diese Seiten werden lokal per
-  `file://`-Pfad im Browser geöffnet und angeschaut – kein Build, kein Push,
-  keine Deploy-Kosten.
-- Die Root-`index.html` zeigt aktuell **temporär die Konzept-Galerie** statt
-  der Live-Seite, damit man beim Öffnen des Projekts sofort alle Entwürfe
-  sieht und per Klick zum jeweiligen Konzept weitergeleitet wird. Die Anzahl
-  im Titel (`X Konzepte zur Auswahl`) wird per Skript automatisch aus der
-  Kartenanzahl berechnet – sie muss beim Hinzufügen neuer Konzepte **nicht**
-  mehr manuell angepasst werden.
+  `file://`-Pfad im Browser geöffnet und angeschaut.
+- Die Root-`index.html` zeigt aktuell **temporär die Favoriten-Galerie** statt
+  der Live-Seite: 13 Farbvarianten von „Warm & Persönlich" prominent oben,
+  die 13 ursprünglichen Konzepte darunter, sichtbar abgesetzt als „Archiv /
+  nicht Favoriten". Die Kartenzahl (`X Farbvarianten`) wird per Skript
+  automatisch berechnet.
 - Die bisherige Live-Seite (Dark-Theme, Orange-Akzent, v3) ist unverändert
   unter [`index.production.html`](../index.production.html) im Repo-Root
   gesichert.
-- Erst wenn der Klient sich für ein Konzept entschieden hat, wird dessen Inhalt
-  zurück in die echte `index.html` überführt (oder als neue Basis übernommen)
-  und dann regulär deployed. `index.production.html` kann danach gelöscht
-  oder als Referenz behalten werden.
+- Erst wenn der Klient sich final entschieden hat, wird der gewählte Inhalt
+  zurück in die echte `index.html` überführt und dann regulär deployed.
 
 ## Struktur
 
-- [`../index.html`](../index.html) – **aktueller Einstiegspunkt**: Galerie
-  aller Konzepte zum Durchklicken (temporär anstelle der Live-Seite)
+- [`../index.html`](../index.html) – **aktueller Einstiegspunkt**: Favoriten
+  zuerst, Archiv darunter (temporär anstelle der Live-Seite)
 - [`index.html`](index.html) – identische Galerie, zusätzlich hier im Ordner
-- [`../index.production.html`](../index.production.html) – das ursprüngliche
-  Live-Design, als Kategorie 00 in der Galerie eingebunden
-- `konzept-01-*.html` … `konzept-11-*.html` – einzelne, in sich geschlossene
-  Konzeptseiten (eigenes Inline-CSS, nutzen Bilder aus `../images/`)
+- `favorit-01-*.html` … `favorit-13-*.html` – die 13 Farbvarianten des
+  Favoriten (Basis: Konzept 03), identischer HTML-Aufbau, nur die
+  CSS-Variablen `--bg / --card / --accent / --accent-dark / --ink / --muted /
+  --blob-shadow` unterscheiden sich pro Datei
+- `konzept-00…12-*.html` bzw. [`../index.production.html`](../index.production.html)
+  – die 13 archivierten Konzepte aus der ersten Runde (nicht mehr Favorit)
 
-## Konzepte im Überblick
+## Die 13 Favoriten-Varianten
 
-| # | Name | Charakter |
-|---|------|-----------|
-| 00 | Original (Aktuell Live) | Das bisherige Design, unverändert, zum Vergleich |
-| 01 | Minimal Zero | Ein Screen, kaum Text, ein CTA |
-| 02 | Klassisch & Vertrauenswürdig | Helles Corporate-Layout, gewohnte Fahrschul-Struktur |
-| 03 | Warm & Persönlich | Cremefarben, rund, familiär, storytelling |
-| 04 | Ausführlich & Informativ | Textlastig, FAQ, Detailwissen zum CH-Führerschein |
-| 05 | Bold Statement | Dunkel, laut, grosse Typografie, Marquee |
-| 06 | Preise zuerst | Preis-Karten direkt above the fold |
-| 07 | Editorial Magazin | Grosse Fotos, Serif, Zitate, Reportage-Stil |
-| 08 | Amtlich & Sachlich | Sie-Form, nüchtern, tabellarisch, behördlich |
-| 09 | WhatsApp Funnel | Ein Screen, ein Button, fertig |
-| 10 | Social Proof zuerst | Bewertungen/Sterne im Zentrum |
-| 11 | Bojan-Style (Video-Hero) | Angelehnt an bojan-fahrschule.ch, Vollbild-Video zu Beginn |
-| 12 | Bojan-Style Dunkel/Rot | Gleiches Layout-Pattern, modern &amp; dunkel, schwarzer Grundton mit Rot als Akzent |
+Die Farben wurden bewusst auf **Fahrschul-/Verkehrs-passende Töne**
+eingegrenzt (Sicherheits-, Signal- und Vertrauensfarben) – keine
+Pastell-/Lifestyle-Töne wie Lavendel, Altrosa oder Koralle mehr, die in
+einer früheren Version noch dabei waren.
 
-Jede Seite nutzt echte Inhalte (Preise, Adresse, Leistungen) der Fahrschule
-Oguzhan, damit der Vergleich realistisch ist – kein Lorem Ipsum.
+| # | Name | Akzentfarbe | Assoziation |
+|---|------|-------------|-------------|
+| 01 | Terracotta | `#E0703F` | Originalton des Favoriten |
+| 02 | Ozeanblau | `#2E6FA7` | Vertrauen, Ruhe |
+| 03 | Tannengrün | `#2F6B45` | Sicherheit, Seriosität |
+| 04 | Bernstein | `#A66C10` | Warnfarbe, Achtung |
+| 05 | Signalrot | `#C13B2E` | Stopp-/Warnrot aus dem Strassenverkehr |
+| 06 | Ampelgrün | `#2E8B3D` | „Freie Fahrt", Go-Signal |
+| 07 | Petrolblau | `#17707A` | Modern, seriös |
+| 08 | Sicherheitsorange | `#D4551F` | Warnweste, Sichtbarkeit |
+| 09 | Navy & Gold | `#1F3A5F` | Autorität, Vertrauen |
+| 10 | Anthrazit | `#3B434B` | Modern, automotiv |
+| 11 | Schiefergrau | `#4C5B6E` | Minimalistisch, kühl |
+| 12 | Dunkel/Rot | `#D9695C` auf `#120E0D` | **identische Palette wie Konzept 12** (Bojan-Style Dunkel/Rot) |
+| 13 | Bordeaux | `#7A2E3D` | Premium, seriös |
 
-## Hinweis zu Konzept 11 (Video-Hero)
+Alle Weiss-auf-Akzent-Kombinationen (Buttons, CTA-Band) wurden gegen die
+WCAG-Kontrastformel geprüft (alle ≥ 3.2:1, die meisten ≥ 4.3:1). Bernstein
+wurde deswegen von `#D69A2D` (Kontrast 2.46:1, zu blass) auf `#A66C10`
+(4.4:1) abgedunkelt.
+
+## Archivierte Konzepte (nicht mehr Favorit)
+
+| # | Name |
+|---|------|
+| 00 | Original (Aktuell Live) |
+| 01 | Minimal Zero |
+| 02 | Klassisch & Vertrauenswürdig |
+| 03 | Warm & Persönlich (Original – der gewählte Favorit, siehe oben) |
+| 04 | Ausführlich & Informativ |
+| 05 | Bold Statement |
+| 06 | Preise zuerst |
+| 07 | Editorial Magazin |
+| 08 | Amtlich & Sachlich |
+| 09 | WhatsApp Funnel |
+| 10 | Social Proof zuerst |
+| 11 | Bojan-Style (Video-Hero) |
+| 12 | Bojan-Style Dunkel/Rot |
+
+## Hinweis zu Konzept 11 (Video-Hero, archiviert)
 
 Das Video im Hero von Konzept 11 ist ein **Platzhalter** – eine lizenzfreie
-Stock-Aufnahme von Mixkit ("Blonde woman driving on road", Rücksitz-/
-Beifahrer-Perspektive beim Autofahren, kostenlose Mixkit-Lizenz, keine
-Namensnennung nötig, extern eingebunden, keine lokale Datei). Sie zeigt
-bewusst eine Fahrszene, aber noch nicht Oguzhan oder sein echtes
-Schulungsfahrzeug. Für die Produktivversion braucht es echtes Filmmaterial
-von Oguzhan/der Fahrschule – das Video wird dann lokal unter `videos/`
-abgelegt und referenziert.
+Stock-Aufnahme von Mixkit ("Blonde woman driving on road"), extern
+eingebunden, keine lokale Datei. Für eine Produktivversion bräuchte es
+echtes Filmmaterial von Oguzhan/der Fahrschule.
